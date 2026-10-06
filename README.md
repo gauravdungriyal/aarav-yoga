@@ -14,3 +14,11 @@ Illustrative photographs from Pexels (not photographs of Aarav Yoga):
 - Yoga props: https://www.pexels.com/photo/yoga-mats-and-yoga-blocks-on-a-wooden-floor-6752163/
 
 Images are saved locally in `dist/assets`. Fonts are served by Google Fonts; system serif and sans-serif fallbacks work offline.
+
+## Updated homepage hero and logo
+
+The uploaded `logo/logo.webp` is used unchanged in every page’s header and footer. `hero.css` controls the full-width homepage photograph, overlaid navigation, headline, and rounded class button.
+
+The hero asset is `dist/assets/studio-hero.png`, generated with built-in imagegen as illustrative artwork, not a photograph of an Aarav Yoga instructor.
+
+Final image prompt: Wide 16:9 bright warm-ivory yoga studio, light wood floor, adult Indian man wearing black sleeveless top and light grey trousers in warrior one lunge with arms straight overhead, positioned in right third, full hands and feet visible, clear left half for headline, diffuse daylight, photorealistic editorial wellness photography, neutral palette, no text, logos, or UI.

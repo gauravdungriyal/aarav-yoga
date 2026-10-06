@@ -1,0 +1,23 @@
+/* The homepage places navigation and content directly over a studio photograph. */
+.logo-brand{display:inline-flex;flex-shrink:0;letter-spacing:0}
+.logo-frame{display:block;position:relative;width:90px;height:90px;border-radius:50%;overflow:hidden;background:var(--white)}
+.logo-frame img{position:absolute;width:138px;height:138px;max-width:none;left:-24px;top:-24px;object-fit:contain}
+.footer-brand .logo-frame{width:104px;height:104px}
+.footer-brand .logo-frame img{width:160px;height:160px;left:-28px;top:-28px}
+.header-inner{min-height:116px}
+body[data-page=index] .site-header{position:absolute;top:14px;left:14px;right:14px;background:transparent;border-bottom:0}
+body[data-page=index] .header-inner{width:calc(100% - 108px);max-width:none;min-height:130px}
+body[data-page=index] .site-header nav{gap:27px}
+body[data-page=index] .site-header nav a{font-weight:500}
+.immersive-hero{position:relative;isolation:isolate;margin:14px;border-radius:14px;overflow:hidden;min-height:690px;height:calc(100svh - 28px);max-height:900px;background:var(--sage)}
+.immersive-hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;z-index:-2}
+.immersive-hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(250,248,242,.91) 0%,rgba(250,248,242,.76) 28%,rgba(250,248,242,.3) 53%,rgba(250,248,242,.03) 75%)}
+.immersive-hero-content{position:relative;min-height:inherit;height:100%;padding:195px 54px 65px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;gap:80px}
+.immersive-hero h1{font-family:var(--sans);font-size:clamp(2.8rem,4.2vw,4.4rem);font-weight:400;line-height:1.2;letter-spacing:-.055em;color:var(--forest);max-width:800px;margin:0}
+.immersive-hero h1 em{font-style:italic;font-weight:400}
+.immersive-hero-intro p{color:var(--forest);font-size:1rem;line-height:1.65;margin:0 0 22px}
+.immersive-hero-intro .button{border-radius:50px;padding:12px 27px;font-weight:500}
+@media(min-width:1600px){.immersive-hero-content{padding:215px 75px 75px}.immersive-hero h1{font-size:4.7rem}body[data-page=index] .header-inner{width:calc(100% - 150px)}}
+@media(max-width:1100px){body[data-page=index] .site-header nav{gap:19px}.immersive-hero-content{padding:175px 38px 55px}.immersive-hero h1{font-size:3.3rem}body[data-page=index] .header-inner{width:calc(100% - 76px)}}
+@media(max-width:900px){body[data-page=index] .site-header nav{background:var(--ivory);left:0;right:0;top:100%;border:1px solid var(--border);border-radius:6px;gap:4px 25px}body[data-page=index] .header-inner{min-height:112px}.menu-toggle{background:var(--ivory)}.immersive-hero-content{padding-top:165px}.immersive-hero h1{font-size:3rem;max-width:650px}}
+@media(max-width:640px){.logo-frame{width:72px;height:72px}.logo-frame img{width:110px;height:110px;left:-19px;top:-19px}.header-inner{min-height:96px}.immersive-hero{margin:8px;border-radius:10px;min-height:730px;height:calc(100svh - 16px);max-height:850px}body[data-page=index] .site-header{top:8px;left:8px;right:8px}body[data-page=index] .header-inner{width:calc(100% - 40px);min-height:102px}.immersive-hero-content{padding:145px 24px 38px;gap:180px}.immersive-hero h1{font-size:clamp(2rem,8.6vw,3rem);line-height:1.22;letter-spacing:-.055em;max-width:100%}.immersive-hero-photo{object-position:80% center}.immersive-hero-shade{background:linear-gradient(180deg,rgba(250,248,242,.91) 0%,rgba(250,248,242,.88) 32%,rgba(250,248,242,.14) 62%,rgba(250,248,242,.8) 100%)}.immersive-hero-intro p{font-size:.9375rem}.immersive-hero-intro .button{min-height:48px;font-size:.875rem}}
