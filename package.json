@@ -1,0 +1,7 @@
+{
+  "name": "aarav-yoga",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs", "check": "node check.mjs", "start": "node serve.mjs" }
+}
