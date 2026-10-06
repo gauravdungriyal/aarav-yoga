@@ -8,7 +8,7 @@ const pages = [['index','Home'],['about','About Us'],['classes','Classes'],['eve
 const link = (page) => `${page}.html`;
 const button = (text, page, secondary = false) => `<a class="button ${secondary ? 'secondary' : ''}" href="${link(page)}">${text}</a>`;
 const eyebrow = (text) => `<p class="eyebrow"><span></span>${text}</p>`;
-const heading = (title) => `<section class="page-heading container"><h1>${title}</h1></section>`;
+const heading = (title) => `<section class="page-heading container"><h1>${title}</h1><div class="heading-divider" aria-hidden="true"><span></span></div></section>`;
 const image = (asset, alt, cls = '') => `<img class="${cls}" src="assets/${asset}.jpg" alt="${alt}" loading="lazy" width="1200" height="900">`;
 const classData = [
   {id:'hatha',name:'Hatha Yoga',category:'Foundations',level:'Beginner friendly',text:'A slower practice with time to explore each posture, steady your breath, and find your own rhythm.',duration:'60 minutes',number:'01',tags:'beginner mindful'},
