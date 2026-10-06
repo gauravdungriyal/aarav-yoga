@@ -23,3 +23,22 @@
 .benefit-label>span{margin-right:120px}
 @media(max-width:760px){.benefit-shade{background:linear-gradient(180deg,#13201833 0%,#13201810 20%,#132018b3 100%)}}
 @media(max-width:359px){.menu-left nav{column-gap:14px}.menu-item{font-size:1.35rem;gap:5px}.menu-number{display:none}}
+
+/* The white navigation and opening photograph share one viewport. */
+:root{--header-height:116px}
+.editorial-header{position:sticky;top:0;height:var(--header-height);min-height:0;z-index:40}
+.desktop-navigation{display:flex;align-items:center;gap:clamp(14px,1.8vw,30px)}
+.desktop-navigation a{display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;white-space:nowrap;transition:color .2s}
+.desktop-navigation a:hover,.desktop-navigation a[aria-current]{color:#ad461b}
+.studio-tagline{top:28px;left:50%;z-index:3;display:block;color:white;font-size:clamp(.8125rem,1vw,1rem);text-shadow:0 1px 8px #0009;opacity:calc(1 - var(--hero-progress))}
+.editorial-hero{height:calc(100svh - var(--header-height));min-height:0;max-height:none}
+.hero-ink{bottom:16%;max-width:790px}
+.hero-ink h1{font-size:clamp(2.5rem,min(5.5vw,10svh),5rem)}
+.motion-enabled .hero-track{height:calc(155svh - var(--header-height))}
+.motion-enabled .editorial-hero{top:var(--header-height)}
+.motion-enabled .benefits-stage{top:var(--header-height);height:calc(100svh - var(--header-height))}
+.motion-enabled .benefits-track{height:calc(230svh - var(--header-height))}
+@media(min-width:1000px){.menu-trigger,.menu-fallback{display:none}.benefit-label>span{margin-right:0}}
+@media(max-width:999px){.desktop-navigation{display:none}}
+@media(max-width:760px){:root{--header-height:92px}.studio-tagline{top:24px;font-size:.8125rem}.hero-ink{bottom:17%}.hero-ink h1{font-size:clamp(2rem,min(8.4vw,8.5svh),3.8rem)}.hero-bottom-note{bottom:22px}}
+@media(max-height:600px){.studio-tagline{top:16px}.hero-ink{bottom:15%}.hero-eyebrow{margin-bottom:12px}.hero-actions{margin-top:18px}.hero-ink h1{font-size:clamp(1.75rem,min(5.5vw,9svh),3.5rem)}.hero-bottom-note,.hero-scroll-note{bottom:12px}}
