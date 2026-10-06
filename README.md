@@ -48,3 +48,5 @@ The uploaded `logo/logo.webp` is used unchanged in every page’s header and foo
 The existing `dist/assets/studio-hero.png` is used in the advanced class and strength panel. It was generated with built-in imagegen as illustrative artwork, not a photograph of an Aarav Yoga instructor.
 
 Final image prompt: Wide 16:9 bright warm-ivory yoga studio, light wood floor, adult Indian man wearing black sleeveless top and light grey trousers in warrior one lunge with arms straight overhead, positioned in right third, full hands and feet visible, clear left half for headline, diffuse daylight, photorealistic editorial wellness photography, neutral palette, no text, logos, or UI.
+
+The About Us page contains the owner-provided institute introduction, mission, vision, philosophy, courses, trainer information, and charity-funded pricing approach. Copy is lightly edited for clarity; the vision describes support for well-being rather than a promise to cure diseases. Its testimonial section remains empty until real reviews are provided.
