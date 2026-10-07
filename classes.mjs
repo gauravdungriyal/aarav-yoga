@@ -1,4 +1,5 @@
 const classes = [
+  { name: 'Private Yoga Classes', tags: ['advanced', 'basic'], image: 'editorial-pair.jpg', alt: 'Individual guidance during a seated yoga practice', text: 'Personal guidance shaped around your body, abilities, and goals. Practise at your own pace with focused attention and options that work for you.' },
   { name: 'Group Yoga Classes', tags: ['advanced', 'basic'], image: 'group.jpg', alt: 'A group practising yoga together', text: 'Practise together with shared motivation and thoughtful guidance. Choose a basic or advanced group to explore movement at a pace that suits your experience.' },
   { name: 'Reiki Healing', tags: ['advanced'], image: 'editorial-studio.jpg', alt: 'A calm studio prepared for practice', text: 'A gentle complementary practice in a quiet setting, with time to pause and rest. Get in touch to learn about our Reiki sessions.' },
   { name: 'Yoga for Seniors', tags: ['basic'], image: 'editorial-pair.jpg', alt: 'A supported seated yoga practice', text: 'A slower, welcoming practice with comfortable movement and options to suit individual abilities. Explore seated postures and gentle stretches with guidance.' },

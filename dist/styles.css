@@ -37,3 +37,10 @@ body[data-page=about] .page-heading{padding-bottom:20px}
 @media(max-width:640px){.about-reasons{padding-bottom:32px}.about-studios{padding-top:32px;padding-bottom:16px}.about-studios+.about-testimonials{padding-top:16px}.studio-grid{grid-template-columns:1fr;gap:22px}.studio-copy{padding:24px}.about-studios .section-title>p{margin-top:12px;font-size:clamp(.625rem,2.5vw,.9375rem)}}
 body[data-page=about] .page-heading+.section{padding-top:24px}
 @media(max-width:640px){#about-purpose,#about-feedback{font-size:clamp(1.25rem,6.8vw,2.5rem);white-space:nowrap}}
+
+/* Icons for the About page's purpose and reasons cards. */
+.about-value-card{border-radius:16px}
+.about-card-icon{display:grid;place-items:center;width:56px;height:56px;border-radius:16px;background:var(--sage);color:var(--forest);margin-bottom:22px}
+.about-card-icon svg{display:block;width:28px;height:28px}
+.about-value-card>p:last-child{margin-bottom:0}
+@media(max-width:640px){.about-card-icon{width:48px;height:48px;margin-bottom:18px}.about-card-icon svg{width:26px;height:26px}}

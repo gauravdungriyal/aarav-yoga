@@ -13,3 +13,5 @@ function updateScroll(){queued=false;if(!activeMotion)return;const vh=innerHeigh
 function queueScroll(){if(queued||!activeMotion)return;queued=true;requestAnimationFrame(updateScroll);}
 function configureMotion(){activeMotion=!reduced.matches&&desktop.matches;root.classList.toggle('motion-enabled',activeMotion);if(!activeMotion){heroTrack.style.removeProperty('--hero-progress');benefitTrack.style.removeProperty('--panel-two');benefitTrack.style.removeProperty('--panel-three');parallax.forEach(el=>el.style.removeProperty('transform'));}setupReveals();queueScroll();}
 window.addEventListener('scroll',queueScroll,{passive:true});window.addEventListener('resize',queueScroll,{passive:true});reduced.addEventListener('change',configureMotion);desktop.addEventListener('change',configureMotion);configureMotion();
+
+

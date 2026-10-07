@@ -1,3 +1,4 @@
+import { renderAboutIcon } from './about-icons.mjs';
 import { renderClasses } from './classes.mjs';
 import { renderEvents } from './events.mjs';
 import { renderFooter } from './footer.mjs';
@@ -26,12 +27,12 @@ content.about = `${heading('About Us')}
  ['01','Mission','Our mission is to help everyone stay physically fit and mentally well through the practice of yoga.'],
  ['02','Vision','Our vision is to make yoga accessible to people of every age, including those managing health conditions, and to support their physical and mental well-being.'],
  ['03','Philosophy','We encourage young people to embrace yoga. As the future of our nation, they can build healthy habits, care for their physical and mental well-being, and contribute positively to their communities.']
-].map(([n,t,p])=>`<article class="value-card"><span class="card-number" aria-hidden="true">${n}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div></section>
+].map(([,t,p])=>`<article class="value-card about-value-card">${renderAboutIcon(t)}<h3>${t}</h3><p>${p}</p></article>`).join('')}</div></section>
 <section class="about-reasons section" aria-labelledby="about-why"><div class="container"><div class="section-title"><div><h2 id="about-why">Why Choose Us?</h2></div></div><div class="card-grid three">${[
  ['01','Special Courses','We offer special courses for every age group, focusing on particular topics and methods of yoga practice. Classes can be conducted at different times, so you can choose a schedule that suits you.'],
  ['02','Experienced Trainers','Aarav Yoga is known for its experienced, engaging faculty. Our teachers specialise in different areas of yoga and make learning clear, approachable, and convenient.'],
  ['03','Affordable Price','Aarav Yoga is a charity-funded trust committed to helping everyone stay fit. We keep our fees minimal and affordable, with charges supporting our charitable purposes.']
-].map(([n,t,p])=>`<article class="value-card"><span class="card-number" aria-hidden="true">${n}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div></div></section>
+].map(([,t,p])=>`<article class="value-card about-value-card">${renderAboutIcon(t)}<h3>${t}</h3><p>${p}</p></article>`).join('')}</div></div></section>
 ${renderStudios()}<section class="section container about-testimonials" aria-labelledby="about-feedback"><h2 id="about-feedback">What People Say About Us</h2><div class="about-testimonials-placeholder"><span class="sun-symbol" aria-hidden="true">✺</span><p>Testimonials will appear here.</p></div></section>${invitation}`;
 content.classes = `${heading('Our Classes')}${renderClasses()}`;
 content.events = `${heading('Events')}${renderEvents()}`;
