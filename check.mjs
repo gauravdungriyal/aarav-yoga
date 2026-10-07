@@ -5,6 +5,7 @@ const pages=['index','about','classes','events','instructors','gallery','blogs',
 for(const page of pages){const html=readFileSync(`dist/${page}.html`,'utf8');assert(html.includes('<main id="main">'));assert(html.includes('aria-current="page"'));for(const [,url]of html.matchAll(/(?:href|src)="([^"]+)"/g)){if(url.startsWith('data:')||url.startsWith('#')||url.startsWith('http'))continue;assert(existsSync('dist/'+url.split('?')[0]),`Missing ${url} on ${page}`);}for(const navPage of pages)assert(html.includes(`href="${navPage}.html"`),`Missing navigation ${navPage}`);}
 execFileSync(process.execPath,['--check','dist/app.js']);
 execFileSync(process.execPath,['--check','dist/homepage.js']);
+execFileSync(process.execPath,['--check','dist/navigation.js']);
 const home=readFileSync('dist/index.html','utf8');
 for(const [,anchor]of home.matchAll(/href="#([^\"]+)"/g))assert(home.includes(`id="${anchor}"`),`Missing homepage anchor ${anchor}`);
 for(const section of ['home','about','classes','benefits','testimonials','instructors','pricing','contact'])assert(home.includes(`id="${section}"`),`Missing section ${section}`);

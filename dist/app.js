@@ -1,10 +1,3 @@
-const menuButton = document.querySelector('.menu-toggle');
-const nav = document.querySelector('#primary-nav');
-function closeMenu() { nav?.classList.remove('open'); menuButton?.setAttribute('aria-expanded','false'); menuButton?.setAttribute('aria-label','Open navigation'); }
-menuButton?.addEventListener('click', () => { const open = nav.classList.toggle('open'); menuButton.setAttribute('aria-expanded',String(open)); menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation'); });
-document.addEventListener('keydown', e => { if(e.key === 'Escape') closeMenu(); });
-document.addEventListener('click', e => { if(!e.target.closest('.site-header')) closeMenu(); });
-window.matchMedia('(min-width: 901px)').addEventListener('change', closeMenu);
 document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('[data-filter]').forEach(b => { const selected=b===button; b.classList.toggle('active',selected); b.setAttribute('aria-pressed',String(selected)); });
   let count=0;
@@ -27,7 +20,7 @@ if(articleData) {
     document.querySelector('.article-dialog').showModal();
   }));
 }
-document.querySelectorAll('dialog').forEach(dialog=> {
+document.querySelectorAll('dialog:not(#site-menu)').forEach(dialog=> {
   dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
 });
