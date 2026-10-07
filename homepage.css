@@ -52,3 +52,38 @@
 .editorial-home .studio-tagline{top:134px;color:white;text-shadow:0 1px 8px #0009}
 @media(max-width:760px){.editorial-home .studio-tagline{top:110px}.editorial-home .hero-image-tone{background:linear-gradient(180deg,#14251d60 0%,#14251d00 30%,#132018b3 100%)}}
 @media(max-height:600px){.editorial-home .studio-tagline{top:100px}}
+
+/* Compact testimonial section with a wider heading and tighter vertical rhythm. */
+.testimonials-editorial{padding-top:56px;padding-bottom:56px}
+.testimonials-editorial .section-intro{grid-template-columns:140px minmax(0,1fr);gap:28px;align-items:center;margin-bottom:24px}
+.testimonials-editorial .section-intro>.section-label{margin:0}
+.testimonials-editorial .quote-heading{display:flex;align-items:center;gap:18px;max-width:none}
+.testimonials-editorial .quote-heading .quotation{position:static;flex-shrink:0;font-size:4rem;line-height:.65;align-self:flex-start;margin-top:14px}
+.testimonials-editorial .quote-heading h2{padding-top:0;font-size:clamp(2rem,3vw,3rem);line-height:1.12}
+.testimonials-editorial .sample-notice{padding-top:12px;margin-bottom:24px}
+.testimonials-editorial .testimonials-grid{gap:32px}
+.testimonials-editorial .testimonial{display:flex;flex-direction:column}
+.testimonials-editorial .testimonial h3{font-size:1.25rem;margin-bottom:12px}
+.testimonials-editorial .testimonial>p{margin-bottom:18px}
+.testimonials-editorial .testimonial-person{gap:10px;margin-top:auto}
+.testimonials-editorial .testimonial-person img{width:38px;height:38px}
+@media(max-width:1100px){.testimonials-editorial .section-intro{grid-template-columns:110px minmax(0,1fr);gap:20px}.testimonials-editorial .testimonials-grid{gap:24px}}
+@media(max-width:760px){.testimonials-editorial{padding-top:36px;padding-bottom:36px}.testimonials-editorial .section-intro{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:20px}.testimonials-editorial .quote-heading{gap:12px}.testimonials-editorial .quote-heading h2{font-size:clamp(1.75rem,6.5vw,2.5rem)}.testimonials-editorial .quote-heading .quotation{font-size:3rem;margin-top:10px}.testimonials-editorial .testimonials-grid{gap:22px}.testimonials-editorial .testimonial{padding-bottom:22px}.testimonials-editorial .testimonial:last-child{padding-bottom:0}.testimonials-editorial .testimonial h3{font-size:1.125rem;margin-bottom:10px}.testimonials-editorial .testimonial>p{margin-bottom:14px;font-size:.875rem}}
+
+.testimonials-heading{margin-bottom:24px}.testimonials-heading h2{font-size:clamp(2rem,3vw,3rem);line-height:1.12}
+@media(max-width:760px){.testimonials-heading{margin-bottom:20px}.testimonials-heading h2{font-size:clamp(1.75rem,6.5vw,2.5rem)}}
+
+/* Class offerings replace the pricing preview. */
+.quiet-statement{padding-bottom:56px}
+.yoga-offerings{padding-top:40px;padding-bottom:56px}
+.offerings-heading{margin-bottom:24px}
+.offerings-heading h2{font-size:clamp(2rem,3vw,3rem);line-height:1.12}
+.offerings-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.offering-card{display:flex;flex-direction:column;min-width:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#FAF8F2}
+.offering-card>img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.offering-copy{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:24px}
+.offering-copy h3{font-size:1.25rem;line-height:1.3;letter-spacing:-.025em;margin:0 0 12px}
+.offering-copy p{font-size:.875rem;line-height:1.65;margin:0 0 20px}
+.offering-copy .pill{margin-top:auto;padding:9px 20px;min-height:44px;font-size:.8125rem}
+@media(max-width:900px){.offerings-grid{gap:18px}.offering-copy{padding:20px}.offering-copy h3{font-size:1.125rem}}
+@media(max-width:760px){.quiet-statement{padding-bottom:32px}.yoga-offerings{padding-top:28px;padding-bottom:36px}.offerings-heading{margin-bottom:20px}.offerings-heading h2{font-size:clamp(1.75rem,6.5vw,2.5rem)}.offerings-grid{grid-template-columns:1fr;gap:20px}.offering-copy{padding:22px}.offering-copy h3{font-size:1.25rem}}
