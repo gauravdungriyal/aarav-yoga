@@ -30,3 +30,9 @@ body.menu-open{overflow:hidden}
 @media(max-width:760px){.fullscreen-menu .menu-item[aria-current]{font-size:1rem;padding:6px 10px;gap:6px}}
 @media(max-width:359px){.fullscreen-menu .menu-item[aria-current]{font-size:.9375rem;padding:6px 8px}}
 @media(prefers-reduced-motion:reduce){.editorial-header .desktop-navigation a{animation:none;transition:none}}
+/* Keep mobile menu numbers outside the selected label's compact pill. */
+@media(max-width:760px){
+ .fullscreen-menu .menu-item[aria-current]{background:transparent;border:0;padding:0;gap:8px;overflow:visible}
+ .fullscreen-menu .menu-item[aria-current] .menu-label{display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1px solid #D9D6CC;border-radius:999px;padding:6px 10px;line-height:1.3;white-space:nowrap}
+}
+@media(max-width:359px){.fullscreen-menu .menu-item[aria-current] .menu-label{padding:6px 8px}}
