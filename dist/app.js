@@ -26,4 +26,4 @@ document.querySelectorAll('dialog:not(#site-menu)').forEach(dialog=> {
 });
 const requestedClass=new URLSearchParams(location.search).get('class');
 const context=document.querySelector('#enquiry-context');
-if(context && requestedClass) {context.hidden=false;context.textContent=`Interested in ${requestedClass}? Contact and booking details will be shared here soon.`;}
+if(context && requestedClass) {context.hidden=false;context.textContent=`Interested in ${requestedClass}? Call or email us using the contact details below to ask about availability and booking.`;}

@@ -2,7 +2,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import assert from 'node:assert/strict';
 const pages=['index','about','classes','events','instructors','gallery','blogs','contacts'];
-for(const page of pages){const html=readFileSync(`dist/${page}.html`,'utf8');assert(html.includes('<main id="main">'));assert(html.includes('aria-current="page"'));for(const [,url]of html.matchAll(/(?:href|src)="([^"]+)"/g)){if(url.startsWith('data:')||url.startsWith('#')||url.startsWith('http'))continue;assert(existsSync('dist/'+url.split('?')[0]),`Missing ${url} on ${page}`);}for(const navPage of pages)assert(html.includes(`href="${navPage}.html"`),`Missing navigation ${navPage}`);}
+for(const page of pages){const html=readFileSync(`dist/${page}.html`,'utf8');assert(html.includes('<main id="main">'));assert(html.includes('aria-current="page"'));for(const [,url]of html.matchAll(/(?:href|src)="([^"]+)"/g)){if(url.startsWith('data:')||url.startsWith('#')||url.startsWith('http')||url.startsWith('mailto:')||url.startsWith('tel:'))continue;assert(existsSync('dist/'+url.split('?')[0]),`Missing ${url} on ${page}`);}for(const navPage of pages)assert(html.includes(`href="${navPage}.html"`),`Missing navigation ${navPage}`);}
 execFileSync(process.execPath,['--check','dist/app.js']);
 execFileSync(process.execPath,['--check','dist/homepage.js']);
 execFileSync(process.execPath,['--check','dist/navigation.js']);

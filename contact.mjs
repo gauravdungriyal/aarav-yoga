@@ -6,6 +6,9 @@ const icons = {
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
 const chatLink = message => `https://wa.me/919958834005${message ? `?text=${encodeURIComponent(message)}` : ''}`;
+export function renderContactDetails() {
+  return '<div class="contact-details"><a href="mailto:anandmamgain1@gmail.com">anandmamgain1@gmail.com</a><a href="tel:+919958834005">+91 99588 34005</a></div>';
+}
 export function renderSocialLinks() {
   return `<nav class="social-links" aria-label="Aarav Yoga social media">${[
     ['instagram', 'Instagram', 'https://www.instagram.com/aaravyoga_/'],
