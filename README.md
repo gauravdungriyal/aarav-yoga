@@ -43,7 +43,7 @@ For exact reference photography, replace the outdoor meditation photo with a wid
 
 ## Existing illustration and logo
 
-The uploaded `logo/logo.webp` is used unchanged in every page’s header and footer.
+The uploaded `logo/logo.png` is used unchanged in every page’s header and footer.
 
 The existing `dist/assets/studio-hero.png` is used in the advanced class and strength panel. It was generated with built-in imagegen as illustrative artwork, not a photograph of an Aarav Yoga instructor.
 

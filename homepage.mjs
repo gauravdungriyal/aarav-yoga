@@ -4,10 +4,10 @@ const photo = (name, alt, className='', eager=false) => `<img src="assets/${name
 const label = (text) => `<p class="section-label">${text}</p>`;
 const heading = (text, tag='h2', className='') => `<${tag} class="reveal-heading ${className}" data-reveal><span>${text}</span></${tag}>`;
 const pill = (text, href, outline=false) => `<a href="${href}" class="pill ${outline?'pill-outline':''}">${text}</a>`;
-const logo = `<span class="editorial-logo"><img src="assets/logo.webp" alt="Aarav Yoga" width="800" height="800"></span>`;
+const logo = `<span class="editorial-logo"><img src="assets/logo.png" alt="Aarav Yoga" width="1920" height="1080"></span>`;
 
 export function renderHomepage() {
-return `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F2F0E7"><title>Aarav Yoga · Start Your Journey to Inner Peace</title><meta name="description" content="Find your own rhythm at Aarav Yoga. Explore thoughtful yoga classes, mindful movement, and space to reconnect with yourself."><link rel="icon" href="assets/logo.webp" type="image/webp"><link rel="stylesheet" href="homepage.css"><link rel="stylesheet" href="navigation.css"><script src="navigation.js" defer></script><script src="homepage.js" defer></script></head><body data-page="index" class="editorial-home"><a class="skip-link" href="#main">Skip to content</a>
+return `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F2F0E7"><title>Aarav Yoga · Start Your Journey to Inner Peace</title><meta name="description" content="Find your own rhythm at Aarav Yoga. Explore thoughtful yoga classes, mindful movement, and space to reconnect with yourself."><link rel="icon" href="assets/logo.png" type="image/png"><link rel="stylesheet" href="homepage.css"><link rel="stylesheet" href="navigation.css"><script src="navigation.js" defer></script><script src="homepage.js" defer></script></head><body data-page="index" class="editorial-home"><a class="skip-link" href="#main">Skip to content</a>
 ${renderHeader('index')}
 ${renderMenu('index')}
 <main id="main">
