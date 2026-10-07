@@ -47,7 +47,7 @@
 .editorial-home{--header-height:0px}
 .editorial-home>.editorial-header{position:absolute;inset:0 0 auto;background:transparent}
 .editorial-home .desktop-navigation a{color:#fff;text-shadow:0 1px 7px #14251d99}
-.editorial-home .desktop-navigation a:hover,.editorial-home .desktop-navigation a[aria-current]{color:#fff;text-decoration:underline;text-decoration-color:#F2A51A;text-decoration-thickness:2px;text-underline-offset:8px}
+
 .editorial-home .hero-image-tone{background:linear-gradient(180deg,#14251d70 0%,#14251d15 25%,transparent 40%,#111f18a6 100%)}
 .editorial-home .studio-tagline{top:134px;color:white;text-shadow:0 1px 8px #0009}
 @media(max-width:760px){.editorial-home .studio-tagline{top:110px}.editorial-home .hero-image-tone{background:linear-gradient(180deg,#14251d60 0%,#14251d00 30%,#132018b3 100%)}}
