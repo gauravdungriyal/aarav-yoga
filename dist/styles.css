@@ -49,3 +49,12 @@ body[data-page=about] .page-heading+.section{padding-top:24px}
 .contact-studios{padding-bottom:64px;scroll-margin-top:24px}.contact-studios>h2{margin-bottom:28px}.contact-studio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.contact-studio-card{background:#fff;border:1px solid #DCE4D8;border-radius:16px;padding:28px;display:flex;flex-direction:column;align-items:flex-start}.contact-studio-card h3{font-family:var(--sans);font-size:1.25rem;margin-bottom:16px}.contact-studio-card address{font-style:normal;color:var(--muted);font-size:.9375rem;line-height:1.7;margin-bottom:20px;overflow-wrap:anywhere}.contact-studio-card a{margin-top:auto;min-height:44px;display:inline-flex;align-items:center}
 .course-enquire{background:var(--forest);color:white;border:1px solid var(--forest);border-radius:999px;padding:10px 20px;gap:14px}.course-enquire:hover{background:#103c21;color:white;border-color:#103c21}
 @media(max-width:640px){.contact-studio-grid{grid-template-columns:1fr}.contact-studio-card{padding:24px}.contact-studios{padding-bottom:40px}}
+@media(max-width:760px){
+ body[data-page="contacts"] .contact-panel>.eyebrow,
+ body[data-page="contacts"] .contact-panel>h2,
+ body[data-page="contacts"] .contact-options>.eyebrow,
+ body[data-page="contacts"] .contact-options>h2,
+ body[data-page="contacts"] .contact-options>.contact-link{display:none}
+ body[data-page="contacts"] .contact-panel>dl{margin-top:0}
+ body[data-page="contacts"] .contact-options>.button{margin-bottom:0}
+}
