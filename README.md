@@ -31,7 +31,7 @@ All displayed photographs exist locally; there are no broken image placeholders.
 
 | Local asset | Use | Source |
 | --- | --- | --- |
-| `dist/assets/hero.jpg` | Existing outdoor meditation hero, class, benefit, and statement | Existing project photograph |
+| `dist/assets/hero.webp` | Existing outdoor meditation hero, class, benefit, and statement | Existing project photograph |
 | `dist/assets/editorial-studio.jpg` | About, studio banner, full-screen menu | https://unsplash.com/photos/dwka5DDrnY0 |
 | `dist/assets/editorial-vases.jpg` | Asymmetric ceramic still life | https://www.pexels.com/photo/ceramic-vases-and-a-candle-8217492/ |
 | `dist/assets/editorial-mat.jpg` | Rolled orange mat invitation | https://www.pexels.com/photo/yogi-rolling-a-yoga-mat-6633997/ |
