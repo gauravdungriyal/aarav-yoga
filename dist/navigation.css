@@ -46,3 +46,11 @@ body.menu-open{overflow:hidden}
 .editorial-home>.editorial-header .desktop-navigation a:focus-visible{outline:2px solid #F2A51A;outline-offset:3px}
 @media(min-width:1000px) and (max-width:1100px){.editorial-home>.editorial-header .desktop-navigation a{padding-inline:10px}.editorial-home>.editorial-header .desktop-navigation a[aria-current]::after{left:10px;right:10px}}
 @media(prefers-reduced-motion:reduce){.editorial-home>.editorial-header .desktop-navigation a{transition:none}}
+
+/* Give mobile navigation its own header space rather than floating over text. */
+@media(max-width:999px){
+ .editorial-header,.editorial-home>.editorial-header{position:sticky;inset:0 0 auto;height:80px;min-height:80px;background:#FAF8F2;border-bottom:1px solid #D9D6CC}
+ .editorial-header .editorial-logo{width:64px;height:64px}
+ .editorial-header .menu-trigger,.editorial-header .menu-fallback{position:static;margin-left:auto;min-height:44px;padding:8px 16px}
+ html{scroll-padding-top:96px;scroll-padding-bottom:80px}
+}

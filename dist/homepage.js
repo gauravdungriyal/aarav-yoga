@@ -15,3 +15,40 @@ function configureMotion(){activeMotion=!reduced.matches&&desktop.matches;root.c
 window.addEventListener('scroll',queueScroll,{passive:true});window.addEventListener('resize',queueScroll,{passive:true});reduced.addEventListener('change',configureMotion);desktop.addEventListener('change',configureMotion);configureMotion();
 
 
+
+(() => {
+  const track = document.querySelector('.reviews-track');
+  if (!track) return;
+  const cards = [...track.querySelectorAll('.review-card')];
+  const controls = document.querySelector('.reviews-controls');
+  const previous = controls.querySelector('.reviews-prev');
+  const next = controls.querySelector('.reviews-next');
+  const status = controls.querySelector('.reviews-status');
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  let current = 0;
+  const position = card => card.offsetLeft - cards[0].offsetLeft;
+  function update() {
+    const max = track.scrollWidth - track.clientWidth;
+    current = cards.reduce((best, card, i) => Math.abs(position(card) - track.scrollLeft) < Math.abs(position(cards[best]) - track.scrollLeft) ? i : best, 0);
+    previous.disabled = track.scrollLeft <= 3;
+    next.disabled = track.scrollLeft >= max - 2;
+    const visible = cards.map((card, i) => ({i, left: position(card)})).filter(({left}) => left + cards[0].offsetWidth > track.scrollLeft + 2 && left < track.scrollLeft + track.clientWidth - 2);
+    const first = visible[0].i + 1, last = visible.at(-1).i + 1;
+    status.textContent = `${first === last ? first : `${first}–${last}`} of ${cards.length}`;
+  }
+  function move(direction) {
+    const index = Math.max(0, Math.min(cards.length - 1, current + direction));
+    track.scrollTo({left: position(cards[index]), behavior: motion.matches ? 'instant' : 'smooth'});
+  }
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  track.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    move(event.key === 'ArrowRight' ? 1 : -1);
+  });
+  track.addEventListener('scroll', update, {passive: true});
+  new ResizeObserver(update).observe(track);
+  controls.hidden = false;
+  update();
+})();

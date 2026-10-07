@@ -1,3 +1,4 @@
+import { renderTestimonials } from './testimonials.mjs';
 import { renderFooter } from './footer.mjs';
 import { renderWhatsApp } from './contact.mjs';
 import { pageLinks, renderHeader, renderMenu } from './navigation.mjs';
@@ -29,11 +30,7 @@ ${renderMenu('index')}
 
 <section class="mat-banner photo-banner" aria-labelledby="mat-heading"><div class="parallax-photo" data-parallax="0.04">${photo('editorial-mat.jpg','A warm orange yoga mat being rolled after practice')}</div><div class="banner-shade mat-shade"></div><div class="banner-copy">${lotus}<p>Your journey begins with a single breath.</p>${heading('Let’s take it together','h2','banner-heading')}${pill('Get started','classes.html')}</div></section>
 
-<section id="testimonials" class="testimonials-editorial section-space"><div class="testimonials-heading">${heading('What Our Students Say')}</div><div class="testimonials-grid">${[
- ['A gentler beginning','“I imagined yoga had to look a certain way. This sample story is about finding a comfortable pace and beginning with curiosity.”','editorial-teacher-woman.jpg','Sample beginner reflection'],
- ['A pause in the everyday','“This sample story imagines the value of making a little time to notice the breath and step away from the rush.”','editorial-teacher-man.jpg','Sample mindfulness reflection'],
- ['Room to be yourself','“This sample story is about a welcoming practice, without the pressure to perform or compare yourself with anyone else.”','hero.webp','Sample community reflection']
- ].map(([title,text,portrait,kind])=>`<article class="testimonial" data-reveal><h3>${title}</h3><p>${text}</p><div class="testimonial-person">${photo(portrait,'Illustrative portrait accompanying sample content')}<div><span>${kind}</span><small>Illustrative content</small></div></div></article>`).join('')}</div></section>
+${renderTestimonials()}
 
 
 
