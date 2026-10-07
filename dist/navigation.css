@@ -19,3 +19,10 @@ body.menu-open{overflow:hidden}
 @media(max-width:480px){.menu-item{font-size:1.55rem}.menu-number{font-size:.625rem}.menu-left nav{column-gap:20px}}
 @media(max-width:359px){.menu-left nav{column-gap:14px}.menu-item{font-size:1.35rem;gap:5px}.menu-number{display:none}}
 @media(prefers-reduced-motion:reduce){.fullscreen-menu,.fullscreen-menu *{animation:none!important;transition:none!important}}
+
+/* A persistent selected-page pill follows aria-current on every route. */
+.editorial-header .desktop-navigation a[aria-current],.editorial-home .desktop-navigation a[aria-current]{background:#FFFFFF;color:#20211E;border:1px solid #D9D6CC;border-radius:999px;padding:10px 22px;min-width:96px;min-height:46px;justify-content:center;font-weight:600;text-transform:uppercase;text-decoration:none;text-shadow:none}
+.fullscreen-menu .menu-left nav{align-items:center}
+.fullscreen-menu .menu-item[aria-current]{background:#FFFFFF;color:#20211E;border:1px solid #D9D6CC;border-radius:999px;padding:10px 18px;width:fit-content;max-width:100%;font-weight:600;text-transform:uppercase;text-decoration:none;font-size:clamp(1.5rem,2.6vw,2.7rem)}
+@media(max-width:760px){.fullscreen-menu .menu-item[aria-current]{font-size:1rem;padding:10px 12px;gap:6px}}
+@media(max-width:359px){.fullscreen-menu .menu-item[aria-current]{font-size:.9375rem;padding:10px}}
