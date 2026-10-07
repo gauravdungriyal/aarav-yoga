@@ -1,0 +1,13 @@
+const classes = [
+  { name: 'Group Yoga Classes', tags: ['advanced', 'basic'], image: 'group.jpg', alt: 'A group practising yoga together', text: 'Practise together with shared motivation and thoughtful guidance. Choose a basic or advanced group to explore movement at a pace that suits your experience.' },
+  { name: 'Reiki Healing', tags: ['advanced'], image: 'editorial-studio.jpg', alt: 'A calm studio prepared for practice', text: 'A gentle complementary practice in a quiet setting, with time to pause and rest. Get in touch to learn about our Reiki sessions.' },
+  { name: 'Yoga for Seniors', tags: ['basic'], image: 'editorial-pair.jpg', alt: 'A supported seated yoga practice', text: 'A slower, welcoming practice with comfortable movement and options to suit individual abilities. Explore seated postures and gentle stretches with guidance.' },
+  { name: 'Meditation Classes', tags: ['meditation'], image: 'hero.webp', alt: 'A man sitting in meditation on a beach', text: 'Make space for stillness through guided meditation. Explore mindfulness, focused attention, and quiet moments at your own pace.' },
+  { name: 'Pranayam Classes', tags: ['pranayam'], image: 'editorial-teacher-man.jpg', alt: 'A yoga practitioner seated with palms together', text: 'Explore gentle breathing practices with clear guidance. Learn to notice your natural breath and practise with a comfortable, unhurried rhythm.' }
+];
+const categories = [['all', 'View All'], ['advanced', 'Advanced'], ['basic', 'Basic'], ['meditation', 'Meditation'], ['pranayam', 'Pranayam']];
+const labels = Object.fromEntries(categories);
+
+export function renderClasses() {
+  return `<section class="container course-directory" aria-label="Yoga classes"><div class="filter-row course-filters" role="group" aria-label="Filter classes by category">${categories.map(([id, label]) => `<button type="button" class="filter${id === 'all' ? ' active' : ''}" aria-pressed="${id === 'all'}" data-filter="${id}">${label}</button>`).join('')}</div><p class="filter-summary" role="status" aria-live="polite">Showing ${classes.length} classes</p><div class="course-grid">${classes.map(({name, tags, image, alt, text}) => `<article class="course-card" data-class-tags="${tags.join(' ')}"><div class="course-photo"><img src="assets/${image}" alt="${alt}" width="800" height="520" loading="lazy" decoding="async"></div><div class="course-copy"><div class="course-categories">${tags.map(tag => `<span>${labels[tag]}</span>`).join('')}</div><h2>${name}</h2><p>${text}</p><a class="course-enquire" href="contacts.html?class=${encodeURIComponent(name)}" aria-label="Enquire about ${name}">Enquire about this class <span aria-hidden="true">↗</span></a></div></article>`).join('')}</div></section>`;
+}

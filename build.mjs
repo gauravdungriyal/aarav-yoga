@@ -1,3 +1,4 @@
+import { renderClasses } from './classes.mjs';
 import { renderEvents } from './events.mjs';
 import { renderFooter } from './footer.mjs';
 import { renderStudios } from './studios.mjs';
@@ -18,13 +19,6 @@ const eyebrow = (text) => `<p class="eyebrow"><span></span>${text}</p>`;
 const heading = (title) => `<section class="page-heading container"><h1>${title}</h1><div class="heading-divider" aria-hidden="true"><span></span></div></section>`;
 const imagePath = asset => `assets/${asset}.${asset === 'hero' ? 'webp' : 'jpg'}`;
 const image = (asset, alt, cls = '') => `<img class="${cls}" src="${imagePath(asset)}" alt="${alt}" loading="lazy" width="1200" height="900">`;
-const classData = [
-  {id:'hatha',name:'Hatha Yoga',category:'Foundations',level:'Beginner friendly',text:'A slower practice with time to explore each posture, steady your breath, and find your own rhythm.',duration:'60 minutes',number:'01',tags:'beginner mindful'},
-  {id:'vinyasa',name:'Vinyasa Flow',category:'Movement',level:'All levels',text:'Move through a flowing sequence of postures, connecting each movement with an easy, steady breath.',duration:'60 minutes',number:'02',tags:'flow'},
-  {id:'restorative',name:'Restorative Yoga',category:'Stillness',level:'All levels',text:'Settle into supported shapes with blankets and props, creating space to slow down and rest.',duration:'45 minutes',number:'03',tags:'beginner mindful'},
-  {id:'pranayama',name:'Breath & Meditation',category:'Awareness',level:'Beginner friendly',text:'Explore gentle breathing practices and guided moments of stillness. A little space for yourself.',duration:'30 minutes',number:'04',tags:'beginner mindful'}
-];
-function classCard(c) { return `<article class="class-card" data-class-tags="${c.tags}"><div class="card-top"><span class="eyebrow">${c.category}</span><span class="card-number">${c.number}</span></div><h3>${c.name}</h3><p>${c.text}</p><div class="card-meta"><span>${c.duration}</span><span>${c.level}</span></div><a class="text-link" href="contacts.html?class=${encodeURIComponent(c.name)}">Enquire about this class</a></article>`; }
 const invitation = `<section class="invitation container"><div><h2>Make a little room<br>for <em>yourself.</em></h2></div><div><p>Whether you’re stepping onto the mat for the first time or returning to your practice, there’s a place for you here.</p>${button('Explore our classes','classes')}</div></section>`;
 const content = {};
 content.about = `${heading('About Us')}
@@ -39,7 +33,7 @@ content.about = `${heading('About Us')}
  ['03','Affordable Price','Aarav Yoga is a charity-funded trust committed to helping everyone stay fit. We keep our fees minimal and affordable, with charges supporting our charitable purposes.']
 ].map(([n,t,p])=>`<article class="value-card"><span class="card-number" aria-hidden="true">${n}</span><h3>${t}</h3><p>${p}</p></article>`).join('')}</div></div></section>
 ${renderStudios()}<section class="section container about-testimonials" aria-labelledby="about-feedback"><h2 id="about-feedback">What People Say About Us</h2><div class="about-testimonials-placeholder"><span class="sun-symbol" aria-hidden="true">✺</span><p>Testimonials will appear here.</p></div></section>${invitation}`;
-content.classes = `${heading('Our Classes')}<section class="container classes-section"><div class="filter-row" role="group" aria-label="Filter classes"><button class="filter active" aria-pressed="true" data-filter="all">All classes</button><button class="filter" aria-pressed="false" data-filter="beginner">Beginner friendly</button><button class="filter" aria-pressed="false" data-filter="flow">Flow & movement</button><button class="filter" aria-pressed="false" data-filter="mindful">Mindful & gentle</button></div><p class="filter-summary" aria-live="polite">Showing 4 classes</p><div class="card-grid two">${classData.map(classCard).join('')}</div><div class="notice"><span class="sun-symbol" aria-hidden="true">✺</span><div><h3>Your first class</h3><p>Wear comfortable clothes, bring water, and arrive with an open mind. Mat availability and studio directions will be confirmed with the timetable.</p></div></div></section><section class="section container faq"><div>${eyebrow('A few things to know')}<h2>Start with<br><em>a little curiosity.</em></h2></div><div><details><summary>Do I need to be flexible?</summary><p>No. Choose a comfortable range of movement, and use variations that work for you. Yoga is a practice you can explore at your own pace.</p></details><details><summary>Which class should I start with?</summary><p>Our Hatha and Restorative descriptions offer a gentle starting point. Once our teachers and timetable are available, we can help you choose a class.</p></details><details><summary>When will the schedule be available?</summary><p>The class timetable and booking details will be added here soon.</p></details></div></section>`;
+content.classes = `${heading('Our Classes')}${renderClasses()}`;
 content.events = `${heading('Events')}${renderEvents()}`;
 // Sample portraits and names until the studio supplies its teacher profiles.
 const instructors = ['Anna Luwanska', 'April Lu', 'Arun Rana', 'Celia Ho', 'Maya Patel', 'Daniel Lee', 'Sofia Mehta', 'Rohan Shah'];
