@@ -144,6 +144,7 @@
 .about-copy{container-type:inline-size}
 .about-copy h2{font-size:clamp(1rem,7.2cqw,2.5rem);white-space:nowrap}
 .about-still-life figcaption{white-space:nowrap}
+@media(max-width:760px){.about-still-life{display:none}}
 .reviews-track{position:relative;display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:0;padding:4px 2px 16px;scrollbar-width:thin;scrollbar-color:#174d2b #e8efe4;overscroll-behavior-x:contain}
 .review-card{flex:0 0 calc((100% - 44px)/3);min-width:0;display:flex;flex-direction:column;scroll-snap-align:start;background:#FAF8F2;border:1px solid #D9D6CC;border-radius:20px;padding:28px;box-shadow:0 4px 16px #20211e06}
 .review-quote{color:#174d2b;font:4rem/.8 Georgia,serif;margin-bottom:12px}
