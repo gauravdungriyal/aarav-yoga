@@ -87,3 +87,32 @@
 .offering-copy .pill{margin-top:auto;padding:9px 20px;min-height:44px;font-size:.8125rem}
 @media(max-width:900px){.offerings-grid{gap:18px}.offering-copy{padding:20px}.offering-copy h3{font-size:1.125rem}}
 @media(max-width:760px){.quiet-statement{padding-bottom:32px}.yoga-offerings{padding-top:28px;padding-bottom:36px}.offerings-heading{margin-bottom:20px}.offerings-heading h2{font-size:clamp(1.75rem,6.5vw,2.5rem)}.offerings-grid{grid-template-columns:1fr;gap:20px}.offering-copy{padding:22px}.offering-copy h3{font-size:1.25rem}}
+
+/* Keep the About introduction compact and close to the class collection. */
+.about-editorial{grid-template-columns:minmax(0,.85fr) minmax(0,1.25fr) minmax(0,.75fr);gap:32px;align-items:center;min-height:0;padding-top:56px;padding-bottom:32px}
+.about-tall{grid-column:1;grid-row:1;height:360px;border-radius:14px}
+.about-copy{grid-column:2;grid-row:1;padding:0;max-width:none}
+.about-copy .section-label{margin-bottom:14px}
+.about-copy h2{font-size:clamp(2rem,3.2vw,3rem);margin-bottom:20px;max-width:none}
+.about-copy>p:not(.section-label){max-width:none;font-size:.9375rem;margin-bottom:16px}
+.about-copy .pill{margin-top:2px}
+.about-still-life{grid-column:3;grid-row:1;margin:0;width:100%;align-self:center}
+.about-still-life img{height:220px;border-radius:14px}
+.about-still-life figcaption{margin-top:12px}
+.about-editorial+.classes-editorial{padding-top:32px}
+@media(max-width:1100px){.about-editorial{grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr) minmax(0,.65fr);gap:24px}.about-tall{height:330px}.about-still-life img{height:180px}}
+@media(max-width:900px){.about-editorial{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:24px}.about-tall{height:300px}.about-copy{grid-column:2;grid-row:1}.about-still-life{grid-column:1 / -1;grid-row:2;display:flex;align-items:center;gap:20px}.about-still-life img{width:180px;height:110px;flex-shrink:0}.about-still-life figcaption{margin:0}}
+@media(max-width:640px){.about-editorial{grid-template-columns:1fr;gap:24px;padding-top:36px;padding-bottom:20px}.about-tall{grid-column:1;grid-row:1;width:100%;height:190px}.about-tall img{object-position:center 60%}.about-copy{grid-column:1;grid-row:2;padding:0;max-width:none}.about-copy h2{font-size:clamp(2rem,7vw,2.5rem);margin-bottom:16px}.about-copy .section-label{margin-bottom:12px}.about-copy>p:not(.section-label){font-size:.875rem;margin-bottom:14px}.about-copy .pill{font-size:.8125rem;padding:10px 20px}.about-still-life{grid-column:1;grid-row:3;gap:16px;width:100%;margin:0}.about-still-life img{width:40%;height:100px}.about-still-life figcaption{font-size:.75rem}.about-editorial+.classes-editorial{padding-top:28px}.classes-intro{margin-bottom:32px}}
+
+/* Compact quote and meditation photograph. */
+.quiet-statement{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;padding-top:40px;padding-bottom:32px}
+.statement-photo{height:320px;border-radius:14px;overflow:hidden}
+.statement-photo img{object-position:center 65%}
+.statement-copy .quotation{font-size:4rem;margin-bottom:16px}
+.statement-copy h2{font-size:clamp(1.8rem,2.8vw,2.75rem);line-height:1.15}
+.statement-copy p{margin-top:16px;margin-bottom:0}
+@media(max-width:1100px){.quiet-statement{gap:32px}.statement-photo{height:290px}}
+@media(max-width:760px){.quiet-statement{grid-template-columns:1fr;gap:24px;padding-top:28px;padding-bottom:24px}.statement-copy{max-width:none}.statement-copy .quotation{font-size:3rem;margin-bottom:12px}.statement-copy h2{font-size:clamp(1.6rem,5.8vw,2.2rem)}.statement-copy p{margin-top:12px}.statement-photo{height:220px}.statement-photo img{object-position:center 65%}}
+
+.about-copy{align-self:start;padding-top:12px}
+@media(max-width:640px){.about-copy{padding-top:0}}
