@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap');
 /* Shared About-page footer, with the same typography and spacing on every page. */
-.site-footer{background:#F2F0E7;color:#202820;font-family:'DM Sans',Arial,sans-serif;font-size:1rem;line-height:1.7}
+.site-footer{background:#E8EFE4;color:#202820;font-family:'DM Sans',Arial,sans-serif;font-size:1rem;line-height:1.7}
 .site-footer .container{width:min(1240px,calc(100% - 96px));margin-inline:auto}
 .site-footer .footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;padding-top:60px;padding-bottom:50px}
 .site-footer .footer-brand{display:inline-flex;flex-shrink:0;color:#174D2B;line-height:.9;letter-spacing:0}
