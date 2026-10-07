@@ -1,6 +1,6 @@
 /* The homepage places navigation and content directly over a studio photograph. */
 .logo-brand{display:inline-flex;flex-shrink:0;letter-spacing:0}
-.logo-frame{display:block;width:104px;height:104px;background:var(--white)}
+.logo-frame{display:block;width:104px;height:104px;background:transparent}
 .logo-frame img{width:100%;height:100%;object-fit:contain}
 .footer-brand .logo-frame{width:104px;height:104px}
 
