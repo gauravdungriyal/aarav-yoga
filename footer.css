@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap');
 /* Shared About-page footer, with the same typography and spacing on every page. */
 .site-footer{background:#F2F0E7;color:#202820;font-family:'DM Sans',Arial,sans-serif;font-size:1rem;line-height:1.7}
 .site-footer .container{width:min(1240px,calc(100% - 96px));margin-inline:auto}
@@ -12,7 +12,7 @@
 .site-footer .footer-label{font-size:.625rem;letter-spacing:.2em;margin-bottom:15px;color:#174D2B}
 .site-footer .footer-links a:hover{text-decoration:underline;text-underline-offset:4px}
 .site-footer .sun-symbol{font-size:2.4rem;color:#F2A51A;line-height:1}
-.site-footer .footer-message p{font-family:'Playfair Display',Georgia,serif;font-size:1.8rem;color:#174D2B;line-height:1.3;margin-top:17px}
+.site-footer .footer-message p{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:1.8rem;color:#174D2B;line-height:1.3;margin-top:17px}
 .site-footer .footer-bottom{border-top:1px solid #DCE4D8;padding-top:20px;padding-bottom:20px;display:flex;justify-content:space-between;gap:20px;font-size:.75rem;color:#647064}
 .site-footer .contact-details{line-height:1.7}
 .site-footer :focus-visible{outline:3px solid #F2A51A;outline-offset:5px}

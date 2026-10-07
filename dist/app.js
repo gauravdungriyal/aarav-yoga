@@ -20,6 +20,18 @@ if(articleData) {
     document.querySelector('.article-dialog').showModal();
   }));
 }
+const eventData = document.querySelector('#event-data');
+if (eventData) {
+  const events = JSON.parse(eventData.textContent);
+  document.querySelectorAll('[data-event]').forEach(button => button.addEventListener('click', () => {
+    const event = events[Number(button.dataset.event)];
+    document.querySelector('#event-category').textContent = event.category;
+    document.querySelector('#event-title').textContent = event.title;
+    document.querySelector('#event-description').textContent = event.description;
+    document.querySelector('.event-dialog .button').href = `https://wa.me/919958834005?text=${encodeURIComponent(`Hello Aarav Yoga! I would like to know more about ${event.title}.`)}`;
+    document.querySelector('.event-dialog').showModal();
+  }));
+}
 document.querySelectorAll('dialog:not(#site-menu)').forEach(dialog=> {
   dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',e=>{const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
