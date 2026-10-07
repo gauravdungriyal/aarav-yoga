@@ -21,7 +21,7 @@ function classCard(c) { return `<article class="class-card" data-class-tags="${c
 const invitation = `<section class="invitation container"><div><h2>Make a little room<br>for <em>yourself.</em></h2></div><div><p>Whether you’re stepping onto the mat for the first time or returning to your practice, there’s a place for you here.</p>${button('Explore our classes','classes')}</div></section>`;
 const content = {};
 content.about = `${heading('About Us')}
-<section class="section container" aria-labelledby="about-purpose"><div class="section-title"><div><h2 id="about-purpose">Our purpose.<br><em>Your well-being.</em></h2></div></div><div class="card-grid three">${[
+<section class="section container" aria-labelledby="about-purpose"><div class="section-title"><div><h2 id="about-purpose">Our purpose. <em>Your well-being.</em></h2></div></div><div class="card-grid three">${[
  ['01','Mission','Our mission is to help everyone stay physically fit and mentally well through the practice of yoga.'],
  ['02','Vision','Our vision is to make yoga accessible to people of every age, including those managing health conditions, and to support their physical and mental well-being.'],
  ['03','Philosophy','We encourage young people to embrace yoga. As the future of our nation, they can build healthy habits, care for their physical and mental well-being, and contribute positively to their communities.']
