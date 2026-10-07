@@ -15,4 +15,4 @@
 .page-heading .heading-divider{margin-inline:auto}
 body[data-page=about] .page-heading{padding-bottom:20px}
 body[data-page=about] .page-heading+.section{padding-top:24px}
-@media(max-width:640px){#about-purpose{font-size:clamp(1.125rem,5.2vw,2rem);white-space:nowrap}}
+@media(max-width:640px){#about-purpose,#about-feedback{font-size:clamp(1.25rem,6.8vw,2.5rem);white-space:nowrap}}
