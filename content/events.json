@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "title": "A morning on the mat",
+      "category": "Community",
+      "image": "/assets/uploads/group.jpg",
+      "alt": "A shared yoga practice",
+      "description": "A welcoming shared practice with gentle movement and a moment of stillness.",
+      "date": "",
+      "location": "",
+      "registrationUrl": ""
+    },
+    {
+      "title": "The art of slowing down",
+      "category": "Workshop",
+      "image": "/assets/uploads/editorial-studio.jpg",
+      "alt": "Yoga mats arranged in a sunlit studio",
+      "description": "An introduction to supported postures, restful pauses, and finding ease in your practice.",
+      "date": "",
+      "location": "",
+      "registrationUrl": ""
+    },
+    {
+      "title": "Movement in nature",
+      "category": "Outdoor yoga",
+      "image": "/assets/uploads/hero.webp",
+      "alt": "Meditation on a tropical beach",
+      "description": "Space to breathe, move, and connect outdoors. Location and event details will follow.",
+      "date": "",
+      "location": "",
+      "registrationUrl": ""
+    },
+    {
+      "title": "A moment to breathe",
+      "category": "Mindfulness",
+      "image": "/assets/uploads/editorial-pair.jpg",
+      "alt": "Two people sharing a seated yoga practice",
+      "description": "Explore gentle breathing and guided moments of stillness in a welcoming shared practice.",
+      "date": "",
+      "location": "",
+      "registrationUrl": ""
+    }
+  ]
+}

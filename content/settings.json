@@ -1,0 +1,44 @@
+{
+  "siteName": "Aarav Yoga",
+  "logo": "/assets/uploads/logo.png",
+  "phone": "+919958834005",
+  "phoneDisplay": "+91 99588 34005",
+  "whatsapp": "919958834005",
+  "email": "anandmamgain1@gmail.com",
+  "instagram": "https://www.instagram.com/aaravyoga_/",
+  "x": "https://x.com/YogaAarav",
+  "facebook": "https://www.facebook.com/Aaravyoga/",
+  "contactLocations": "Four locations in Noida and Greater Noida.",
+  "contactTimings": "Contact us for available sessions at your preferred studio.",
+  "contactNote": "WhatsApp, call, or email us for bookings and help choosing a studio. Please confirm your session and location before visiting.",
+  "footerText": "A little movement.\nA little stillness.\nA little more you.",
+  "footerMessage": "Make space\nfor what matters.",
+  "footerTagline": "Move mindfully. Live gently.",
+  "menuText": "Find your practice.\nMake a little room for yourself.",
+  "menuImage": "/assets/uploads/editorial-studio.jpg",
+  "menuImageAlt": "A calm, sunlit studio",
+  "invitationTitle": "Make a little room\nfor yourself.",
+  "invitationText": "Whether you’re stepping onto the mat for the first time or returning to your practice, there’s a place for you here.",
+  "faqs": [
+    {
+      "question": "How do I book a class?",
+      "answer": "Message us on WhatsApp to ask about available classes and how to book.",
+      "message": "Hello Aarav Yoga! I would like to book a yoga class. Can you share the available options?"
+    },
+    {
+      "question": "Can beginners join?",
+      "answer": "Yes. Our Private Yoga and Group Yoga Classes include basic options. Message us to find a suitable starting point.",
+      "message": "Hello Aarav Yoga! I am a beginner. Which class would you recommend?"
+    },
+    {
+      "question": "What are the timings and fees?",
+      "answer": "Please contact us for the current timetable, class fees, and package details.",
+      "message": "Hello Aarav Yoga! Could you share your class timings and fees?"
+    },
+    {
+      "question": "Where is the studio?",
+      "answer": "We have four studios in Noida and Greater Noida: Jaypee Greens, ATS Pristine (Sector 150), Aanad Ashray (Phi II), and Purvanchal Royal City (Chi V). Find addresses and map links on our Contact page.",
+      "message": "Hello Aarav Yoga! Could you share your studio address and directions?"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "purposeTitle": "Our purpose.",
+  "purposeEmphasis": "Your well-being.",
+  "purpose": [
+    {
+      "title": "Mission",
+      "text": "Our mission is to help everyone stay physically fit and mentally well through the practice of yoga.",
+      "icon": "Mission"
+    },
+    {
+      "title": "Vision",
+      "text": "Our vision is to make yoga accessible to people of every age, including those managing health conditions, and to support their physical and mental well-being.",
+      "icon": "Vision"
+    },
+    {
+      "title": "Philosophy",
+      "text": "We encourage young people to embrace yoga. As the future of our nation, they can build healthy habits, care for their physical and mental well-being, and contribute positively to their communities.",
+      "icon": "Philosophy"
+    }
+  ],
+  "reasonsTitle": "Why Choose Us?",
+  "reasons": [
+    {
+      "title": "Special Courses",
+      "text": "We offer special courses for every age group, focusing on particular topics and methods of yoga practice. Classes can be conducted at different times, so you can choose a schedule that suits you.",
+      "icon": "Special Courses"
+    },
+    {
+      "title": "Experienced Trainers",
+      "text": "Aarav Yoga is known for its experienced, engaging faculty. Our teachers specialise in different areas of yoga and make learning clear, approachable, and convenient.",
+      "icon": "Experienced Trainers"
+    },
+    {
+      "title": "Affordable Price",
+      "text": "Aarav Yoga is a charity-funded trust committed to helping everyone stay fit. We keep our fees minimal and affordable, with charges supporting our charitable purposes.",
+      "icon": "Affordable Price"
+    }
+  ]
+}

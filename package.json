@@ -3,5 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": { "build": "node build.mjs", "check": "node check.mjs", "start": "node serve.mjs" }
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node check.mjs",
+    "start": "node serve.mjs",
+    "dev:cms": "node dev-cms.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "markdown-it": "15.0.3"
+  },
+  "overrides": {
+    "decap-server": {
+      "@hapi/joi": "npm:joi@18.3.0",
+      "simple-git": "4.0.2"
+    }
+  },
+  "devDependencies": {
+    "decap-server": "3.11.3"
+  }
 }

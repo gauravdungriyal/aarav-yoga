@@ -1,6 +1,8 @@
 # Aarav Yoga
 
-A responsive eight-page static website using the provided brand palette. No dependencies are needed.
+A responsive eight-page static website using the provided brand palette, with Decap CMS for content editing. Install dependencies with `npm ci` (Node.js 22 or newer).
+
+See [CMS-SETUP.md](CMS-SETUP.md) for the Vercel/GitHub sign-in setup, editing guide and local CMS preview. Website content now lives in `content/*.json`, and editable images live in `assets/uploads/`. The page templates consume those files during the build.
 
 Run `npm run build` to regenerate the pages, `npm run check` to validate them, and `npm start` to preview at http://127.0.0.1:4173. You can also open `dist/index.html` directly.
 

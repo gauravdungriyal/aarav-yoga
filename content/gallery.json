@@ -1,0 +1,20 @@
+{
+  "note": "Illustrative photographs for our first collection. Our own Aarav Yoga gallery is coming soon.",
+  "items": [
+    {
+      "image": "/assets/uploads/hero.webp",
+      "title": "A moment outdoors",
+      "label": "Quiet & connection"
+    },
+    {
+      "image": "/assets/uploads/group.jpg",
+      "title": "Together on the mat",
+      "label": "Movement & community"
+    },
+    {
+      "image": "/assets/uploads/detail.jpg",
+      "title": "Space for your practice",
+      "label": "Simple rituals"
+    }
+  ]
+}

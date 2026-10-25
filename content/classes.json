@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "name": "Private Yoga Classes",
+      "tags": [
+        "advanced",
+        "basic"
+      ],
+      "image": "/assets/uploads/editorial-pair.jpg",
+      "alt": "Individual guidance during a seated yoga practice",
+      "text": "Personal guidance shaped around your body, abilities, and goals. Practise at your own pace with focused attention and options that work for you.",
+      "timings": "",
+      "price": "",
+      "instructor": "",
+      "studio": ""
+    },
+    {
+      "name": "Group Yoga Classes",
+      "tags": [
+        "advanced",
+        "basic"
+      ],
+      "image": "/assets/uploads/group.jpg",
+      "alt": "A group practising yoga together",
+      "text": "Practise together with shared motivation and thoughtful guidance. Choose a basic or advanced group to explore movement at a pace that suits your experience.",
+      "timings": "",
+      "price": "",
+      "instructor": "",
+      "studio": ""
+    },
+    {
+      "name": "Reiki Healing",
+      "tags": [
+        "advanced"
+      ],
+      "image": "/assets/uploads/editorial-studio.jpg",
+      "alt": "A calm studio prepared for practice",
+      "text": "A gentle complementary practice in a quiet setting, with time to pause and rest. Get in touch to learn about our Reiki sessions.",
+      "timings": "",
+      "price": "",
+      "instructor": "",
+      "studio": ""
+    },
+    {
+      "name": "Yoga for Seniors",
+      "tags": [
+        "basic"
+      ],
+      "image": "/assets/uploads/editorial-pair.jpg",
+      "alt": "A supported seated yoga practice",
+      "text": "A slower, welcoming practice with comfortable movement and options to suit individual abilities. Explore seated postures and gentle stretches with guidance.",
+      "timings": "",
+      "price": "",
+      "instructor": "",
+      "studio": ""
+    },
+    {
+      "name": "Meditation Classes",
+      "tags": [
+        "meditation"
+      ],
+      "image": "/assets/uploads/hero.webp",
+      "alt": "A man sitting in meditation on a beach",
+      "text": "Make space for stillness through guided meditation. Explore mindfulness, focused attention, and quiet moments at your own pace.",
+      "timings": "",
+      "price": "",
+      "instructor": "",
+      "studio": ""
+    },
+    {
+      "name": "Pranayam Classes",
+      "tags": [
+        "pranayam"
+      ],
+      "image": "/assets/uploads/editorial-teacher-man.jpg",
+      "alt": "A yoga practitioner seated with palms together",
+      "text": "Explore gentle breathing practices with clear guidance. Learn to notice your natural breath and practise with a comfortable, unhurried rhythm.",
+      "timings": "",
+      "price": "",
+      "instructor": "",
+      "studio": ""
+    }
+  ]
+}

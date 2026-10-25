@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "category": "Beginning your practice",
+      "title": "Your first time on the mat",
+      "summary": "A few gentle reminders for starting yoga with curiosity and confidence.",
+      "body": "Starting something new can feel unfamiliar. You do not need to arrive with experience, flexibility, or a perfect idea of what yoga should look like.\n\nChoose a comfortable pace, make space for questions, and let your teacher know that you are new. Take breaks when you need them. A smaller movement can be just as useful as a bigger one.\n\nYour practice is an opportunity to notice, rather than perform. Begin with what feels manageable, and give yourself time to learn.",
+      "image": "/assets/uploads/detail.jpg",
+      "alt": "Yoga props ready for practice",
+      "artwork": "Be here."
+    },
+    {
+      "category": "Everyday rituals",
+      "title": "Making room for a pause",
+      "summary": "Small ways to bring a moment of presence into an ordinary day.",
+      "body": "A pause does not have to be long. It can be the moment before you start your morning, the space between tasks, or a few quiet minutes at the end of the day.\n\nFind a comfortable seat, let your shoulders soften, and notice the natural rhythm of your breath without trying to change it. You can keep your eyes open and rest your gaze on something still.\n\nThere is no need to force a result. A brief, comfortable pause is enough. Return to your day when you are ready.",
+      "image": "",
+      "alt": "",
+      "artwork": "Pause."
+    },
+    {
+      "category": "On the mat",
+      "title": "Movement or stillness?",
+      "summary": "Learning to choose a practice that fits the way you feel today.",
+      "body": "Some days you may want a flowing practice. On others, a slower pace or a supported resting posture can feel more fitting. Your practice does not have to look the same each time.\n\nBefore you begin, take a moment to notice your energy, your available time, and what you feel ready to explore. Consider a familiar sequence or simply a few easy movements.\n\nYou can change your mind as you go. Choosing an easier variation, taking a break, or ending earlier can be part of a thoughtful practice.",
+      "image": "",
+      "alt": "",
+      "artwork": "Be here."
+    }
+  ]
+}

@@ -13,10 +13,10 @@ const articleData=document.querySelector('#article-data');
 if(articleData) {
   const articles=JSON.parse(articleData.textContent);
   document.querySelectorAll('[data-article]').forEach(button=>button.addEventListener('click',()=> {
-    const [category,title,,...paragraphs]=articles[Number(button.dataset.article)];
+    const {category,title,html}=articles[Number(button.dataset.article)];
     document.querySelector('#article-category').textContent=category;
     document.querySelector('#article-title').textContent=title;
-    const body=document.querySelector('#article-body'); body.replaceChildren(...paragraphs.map(text=>{const p=document.createElement('p');p.textContent=text;return p;}));
+    const body=document.querySelector('#article-body'); body.innerHTML=html; // HTML is rendered at build time with raw HTML disabled and safe links.
     document.querySelector('.article-dialog').showModal();
   }));
 }
@@ -28,7 +28,10 @@ if (eventData) {
     document.querySelector('#event-category').textContent = event.category;
     document.querySelector('#event-title').textContent = event.title;
     document.querySelector('#event-description').textContent = event.description;
-    document.querySelector('.event-dialog .button').href = `https://wa.me/919958834005?text=${encodeURIComponent(`Hello Aarav Yoga! I would like to know more about ${event.title}.`)}`;
+    document.querySelector('#event-details').textContent = [event.date ? event.dateLabel : 'Dates to be announced.', event.location || 'Venue to be announced.'].join(' · ');
+    const action = document.querySelector('.event-dialog .button');
+    action.href = event.registrationUrl || event.enquiryUrl;
+    action.textContent = event.registrationUrl ? 'Register for this event' : 'Enquire on WhatsApp';
     document.querySelector('.event-dialog').showModal();
   }));
 }

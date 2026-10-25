@@ -1,0 +1,62 @@
+{
+  "tagline": "Health, Harmony & Happiness",
+  "heroTitle": "Start Your Journey\nto Inner Peace",
+  "heroImage": "/assets/uploads/hero.webp",
+  "heroAlt": "A man meditating on a tropical beach",
+  "heroButton": "Get started",
+  "heroNote": "A practice for every season of you.",
+  "aboutTitle": "Move. Breathe. Transform.",
+  "aboutText": "More than a sequence of postures. A space to slow down, move with intention, and reconnect with the person you are.",
+  "aboutTextSecond": "At Aarav Yoga, we believe a meaningful practice begins with curiosity. Come as you are. Find your own rhythm.",
+  "aboutImage": "/assets/uploads/editorial-studio.jpg",
+  "aboutAlt": "Warm light entering a quiet studio",
+  "stillImage": "/assets/uploads/editorial-vases.jpg",
+  "stillAlt": "Neutral ceramic vases in a softly lit interior",
+  "stillCaption": "Less noise.\nMore room to simply be.",
+  "valuesTitle": "Our Core Values",
+  "values": [
+    {
+      "label": "Inclusivity",
+      "title": "A place for every body",
+      "text": "We welcome people of every age, ability, and experience. Come as you are, explore at your own pace, and find a practice that feels right for you."
+    },
+    {
+      "label": "Mindful Practice",
+      "title": "Move with intention",
+      "text": "We encourage thoughtful movement, steady attention, and a comfortable rhythm. Each practice is a chance to pause, listen, and reconnect with yourself."
+    },
+    {
+      "label": "Community & Care",
+      "title": "Grow together",
+      "text": "We believe in clear guidance, shared encouragement, and kindness. Our studios bring people together in a supportive space to learn and grow."
+    }
+  ],
+  "benefits": [
+    {
+      "image": "/assets/uploads/studio-hero.png",
+      "alt": "A strong standing yoga posture",
+      "title": "Strength &\nFlexibility",
+      "text": "Explore steady movement, strength, and a comfortable range of motion."
+    },
+    {
+      "image": "/assets/uploads/group.jpg",
+      "alt": "People practising gentle yoga together",
+      "title": "Stress Relief &\nMental Clarity",
+      "text": "Pause the rush. Bring your attention to movement and the rhythm of your breath."
+    },
+    {
+      "image": "/assets/uploads/hero.webp",
+      "alt": "A peaceful moment of meditation outdoors",
+      "title": "Inner Peace &\nEmotional Well-being",
+      "text": "A little more presence. A little more kindness toward yourself."
+    }
+  ],
+  "bannerImage": "/assets/uploads/editorial-mat.jpg",
+  "bannerAlt": "A warm orange yoga mat being rolled after practice",
+  "bannerText": "Your journey begins with a single breath.",
+  "bannerTitle": "Let’s take it together",
+  "quote": "There is no perfect way to arrive. Just a breath, a little attention, and the willingness to begin.",
+  "quoteAttribution": "A thought from Aarav Yoga",
+  "quoteImage": "/assets/uploads/hero.webp",
+  "quoteAlt": "A man sitting in meditation on a sandy beach"
+}

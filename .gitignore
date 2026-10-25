@@ -2,3 +2,7 @@
 *.tar.gz
 node_modules/
 logo/*.mp4
+.env
+.env.*
+!.env.example
+.vercel/

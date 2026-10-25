@@ -1,0 +1,29 @@
+{
+  "introduction": "Four spaces to practise in Noida and Greater Noida.",
+  "items": [
+    {
+      "name": "Yoga Studio – 1",
+      "address": "Flat No -703, 1, Moon Ct St, Block B, Jaypee Greens, Greater Noida, Uttar Pradesh 201310",
+      "image": "/assets/uploads/editorial-studio.jpg",
+      "alt": "Illustrative yoga studio interior"
+    },
+    {
+      "name": "Yoga Studio – 2",
+      "address": "Ats Pristine Sector – 150, Noida",
+      "image": "/assets/uploads/editorial-studio.jpg",
+      "alt": "Illustrative yoga studio interior"
+    },
+    {
+      "name": "Yoga Studio – 3",
+      "address": "Aanad Ashray Society P-4 , Phi -II Greater Noida",
+      "image": "/assets/uploads/editorial-studio.jpg",
+      "alt": "Illustrative yoga studio interior"
+    },
+    {
+      "name": "Yoga Studio – 4",
+      "address": "Purvanchal Royal City Sector-Chi-V, Grater Noida",
+      "image": "/assets/uploads/editorial-studio.jpg",
+      "alt": "Illustrative yoga studio interior"
+    }
+  ]
+}

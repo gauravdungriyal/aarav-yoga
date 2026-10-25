@@ -20,6 +20,7 @@ window.addEventListener('scroll',queueScroll,{passive:true});window.addEventList
   const track = document.querySelector('.reviews-track');
   if (!track) return;
   const cards = [...track.querySelectorAll('.review-card')];
+  if (!cards.length) return;
   const controls = document.querySelector('.reviews-controls');
   const previous = controls.querySelector('.reviews-prev');
   const next = controls.querySelector('.reviews-next');

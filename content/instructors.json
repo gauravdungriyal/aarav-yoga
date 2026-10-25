@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "name": "Anna Luwanska",
+      "image": "/assets/uploads/instructors/teacher-1.jpg",
+      "alt": "Illustrative portrait for Anna Luwanska",
+      "speciality": "",
+      "biography": ""
+    },
+    {
+      "name": "April Lu",
+      "image": "/assets/uploads/instructors/teacher-2.jpg",
+      "alt": "Illustrative portrait for April Lu",
+      "speciality": "",
+      "biography": ""
+    },
+    {
+      "name": "Arun Rana",
+      "image": "/assets/uploads/instructors/teacher-3.jpg",
+      "alt": "Illustrative portrait for Arun Rana",
+      "speciality": "",
+      "biography": ""
+    },
+    {
+      "name": "Celia Ho",
+      "image": "/assets/uploads/instructors/teacher-4.jpg",
+      "alt": "Illustrative portrait for Celia Ho",
+      "speciality": "",
+      "biography": ""
+    },
+    {
+      "name": "Maya Patel",
+      "image": "/assets/uploads/instructors/teacher-5.jpg",
+      "alt": "Illustrative portrait for Maya Patel",
+      "speciality": "",
+      "biography": ""
+    },
+    {
+      "name": "Daniel Lee",
+      "image": "/assets/uploads/instructors/teacher-6.jpg",
+      "alt": "Illustrative portrait for Daniel Lee",
+      "speciality": "",
+      "biography": ""
+    },
+    {
+      "name": "Sofia Mehta",
+      "image": "/assets/uploads/instructors/teacher-7.jpg",
+      "alt": "Illustrative portrait for Sofia Mehta",
+      "speciality": "",
+      "biography": ""
+    },
+    {
+      "name": "Rohan Shah",
+      "image": "/assets/uploads/instructors/teacher-8.jpg",
+      "alt": "Illustrative portrait for Rohan Shah",
+      "speciality": "",
+      "biography": ""
+    }
+  ]
+}
