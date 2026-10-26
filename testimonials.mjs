@@ -1,6 +1,7 @@
 import { data, raw, h } from './cms-content.mjs';
-const reviews = data.testimonials.items;
+
 
 export function renderTestimonials() {
+  const reviews = data.testimonials.items;
   return `<section id="testimonials" class="testimonials-editorial section-space" aria-labelledby="testimonials-title"><div class="testimonials-heading"><h2 id="testimonials-title">${data.testimonials.title}</h2></div><div class="reviews-carousel" role="region" aria-roledescription="carousel" aria-label="Student testimonials"><div class="reviews-track" tabindex="0" aria-label="Swipe or use arrow keys to browse reviews">${reviews.map(({name, role, text}, i) => `<article class="review-card" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${reviews.length}: ${name}"><span class="review-quote" aria-hidden="true">“</span><blockquote>${text}</blockquote><div class="review-author"><span class="review-avatar" aria-hidden="true">${h(raw.testimonials.items[i].name.split(/\s+/).filter(Boolean).map(part => part[0]).join(''))}</span><div><strong>${name}</strong>${role ? `<span>${role}</span>` : ''}</div></div></article>`).join('')}</div><div class="reviews-controls" hidden><button type="button" class="reviews-prev" aria-label="Previous testimonial">←</button><p class="reviews-status" role="status" aria-live="polite">1 of ${reviews.length}</p><button type="button" class="reviews-next" aria-label="Next testimonial">→</button></div></div></section>`;
 }

@@ -14,6 +14,7 @@ window.CMS_MANUAL_INIT = true;
     if (local) {
       config.local_backend = { url: 'http://127.0.0.1:8081/api/v1' };
       config.publish_mode = 'simple';
+      config.show_preview_links = false;
     } else {
       const auth = await fetch('/api/auth?check=1', { cache: 'no-store' });
       const result = await auth.json().catch(() => ({}));
@@ -26,6 +27,14 @@ window.CMS_MANUAL_INIT = true;
       script.onerror = () => reject(new Error('The editor could not be downloaded. Check your connection and reload.'));
       document.head.append(script);
     });
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = '/admin/previews.js';
+      script.onload = resolve;
+      script.onerror = () => reject(new Error('The live preview could not be loaded. Rebuild the site and reload the editor.'));
+      document.head.append(script);
+    });
+    await window.AaravPreviews.register(window.CMS, config);
     window.CMS.init({ config });
     status.remove();
   } catch (error) {

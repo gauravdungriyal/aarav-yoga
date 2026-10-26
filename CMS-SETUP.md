@@ -62,7 +62,21 @@ Visitors can swipe, use arrows or dots, and pause playback. Autoplay pauses duri
 
 The existing hero scroll-to-split effect has been replaced by the slideshow; the benefit panels retain their scroll behaviour. Splide 4.1.4 is pinned and copied into the build, including its MIT license, so the public slideshow does not depend on a third-party CDN. Slide content stays in plain JSON under `content/home.json`, independently of Splide and Decap.
 
-Each section is one JSON document, so its list changes share a draft and publish together. There is no custom visual editor preview in this first version; inspect the Vercel preview deployment when available. Changes to layout, navigation structure, new page types, payments or booking systems still require development.
+Each section is one JSON document, so its list changes share a draft and publish together. Changes to navigation structure, new page types, payments or booking systems still require development.
+
+### Live editor previews and saved-draft previews
+
+All content sections have a live preview pane. Edits appear after a short typing pause, without saving, creating a commit or changing the public website. The pane uses the same templates, styles and scripts as the site. Use **View → Fit pane / Desktop / Mobile** to inspect layouts. For the homepage, **Hero slide** selects the image being edited; autoplay starts paused in the editor. The pane keeps its scroll position across text edits. If an incomplete entry cannot yet render, the previous valid preview stays visible with a message.
+
+**Page** lets you inspect shared settings, studio locations, testimonials and SEO changes on any relevant page. Navigation links stay inside the preview; external destinations are disabled there. Uploaded images can be previewed before publishing. The embedded website runs in an isolated iframe without access to the CMS login or storage.
+
+For a full website preview, **Save** the draft in the production editor, wait for its Vercel build, then use **Check for Preview / View Preview** in Decap's toolbar. The link opens the entry's page on the draft deployment. Publishing still requires the explicit Draft → Ready → Publish workflow and updates the public site only after the production build succeeds.
+
+The repository's `.github/workflows/cms-preview.yml` translates deployment events for **Preview – aarav-yoga-x9f9** into the `deploy-preview/aarav-yoga-x9f9` commit status consumed by Decap. This is necessary because Vercel's ordinary commit-status URL points to its dashboard, not the draft website. The workflow uses GitHub's automatic token, checks out no draft code and requires no new secrets. It becomes active once committed to the repository's default branch. Existing drafts need a new save/build after the workflow is deployed; older deployments do not replay their events.
+
+Keep GitHub Actions enabled, Vercel's Git integration connected, and preview deployments enabled for CMS branches. If Vercel protects preview deployments, sign in with an authorised Vercel account when opening the link. Production CMS sign-in remains restricted to the production hostname; use the production editor to manage drafts, not `/admin/` on a preview deployment. If the Vercel project is renamed, update the workflow project/environment checks and `backend.preview_context` together.
+
+Before pushing this implementation, live editor previews are available locally; the complete GitHub → Vercel draft-link flow must be verified after deployment by saving a test draft without publishing it.
 
 ## Local editing
 
@@ -83,7 +97,10 @@ The local proxy is pinned to Decap Server 3.11.3, with patched Joi and simple-gi
 - `assets/uploads/`: source media managed by Decap, copied into `dist/assets/uploads/` during builds. Existing images have been copied here so they are available in the media picker.
 - `admin/config.json`: editor fields, GitHub repository and workflow settings.
 - `api/auth.js`, `api/callback.js`, `lib/cms-oauth.js`: Vercel GitHub OAuth flow, with state validation, PKCE, a short-lived secure cookie and an exact-origin popup handshake.
-- `cms-content.mjs`: content validation, escaping and Markdown rendering.
+- `cms-content.mjs`, `content-format.mjs`: content validation, escaping and Markdown rendering.
+- `pages.mjs`: shared page rendering for production builds and editor previews.
+- `admin/previews.mjs`, `admin/preview-model.mjs`: live preview controls and temporary editor data. Builds bundle these into `dist/admin/previews.js` and generate the published-content snapshot in `preview-data.json`.
+- `.github/workflows/cms-preview.yml`: saved-draft deployment links for Decap.
 
 ```sh
 npm test
@@ -92,6 +109,6 @@ npm run check
 npm audit
 ```
 
-The build rejects invalid fields, unsafe URLs and missing images. Automated tests cover content updates, Markdown safety, date/link rendering and OAuth errors, state and origin checks. Real GitHub login and live Vercel publishing must be checked after the OAuth app and environment variables are configured.
+The build rejects invalid fields, unsafe URLs and missing images. Automated tests cover content updates, Markdown safety, date/link rendering, OAuth errors, state and origin checks, live preview rendering for all sections, unpublished image handling and draft-link status validation. Real GitHub login, workflow execution and live Vercel draft links must also be checked after deployment.
 
 If sign-in says setup is incomplete, confirm the production environment variables and redeploy. If GitHub rejects the callback, compare its registered callback URL exactly. If content publishes but the website stays unchanged, inspect the Vercel deployment triggered by the content commit.

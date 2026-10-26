@@ -1,7 +1,8 @@
 import { data, raw, h, json, dateLabel } from './cms-content.mjs';
 import { chatLink } from './contact.mjs';
-const events = data.events.items;
+
 
 export function renderEvents() {
+  const events = data.events.items;
   return `<section class="event-tiles" aria-label="Upcoming yoga events">${events.map((event, i) => `<article class="event-tile"><img src="${event.image}" alt="${event.alt}" width="800" height="800" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async"><div class="event-tile-copy"><p class="event-date">${h(dateLabel(raw.events.items[i].date))}</p><h2>${event.title}</h2><span class="event-category">${event.category}</span><button type="button" class="event-read-more" data-event="${i}" aria-label="Read more about ${event.title}" aria-haspopup="dialog">Read more <span aria-hidden="true">→</span></button></div></article>`).join('')}</section><dialog class="event-dialog" aria-labelledby="event-title"><button class="dialog-close" type="button" aria-label="Close event details">×</button><p id="event-category" class="eyebrow"></p><h2 id="event-title"></h2><p id="event-description"></p><p id="event-details">Dates, venues, and registration details will be announced soon.</p><a class="button" href="${chatLink('Hello Aarav Yoga! I would like to know more about your upcoming events.')}" target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a></dialog><script type="application/json" id="event-data">${json(raw.events.items.map(event => ({ ...event, dateLabel: dateLabel(event.date), enquiryUrl: chatLink(`Hello ${raw.settings.siteName}! I would like to know more about ${event.title}.`) })))}</script>`;
 }

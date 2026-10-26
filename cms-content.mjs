@@ -1,17 +1,8 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, sep } from 'node:path';
-import MarkdownIt from 'markdown-it';
-
-export const h = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-export const lines = value => h(value).replace(/\r?\n/g, '<br>');
-export const json = value => JSON.stringify(value).replace(/</g, '\\u003c');
-const markdown = new MarkdownIt({ html: false, linkify: false, breaks: false });
-// CMS articles may embed only local site images; external links still use markdown-it's safe URL rules.
-markdown.renderer.rules.image = (tokens, idx, options, env, self) => {
-  validateImage(tokens[idx].attrGet('src'), 'Blog image');
-  return self.renderToken(tokens, idx, options);
-};
-export const renderMarkdown = value => markdown.render(value || '');
+import { h, lines, json, escapeTree, createMarkdown, dateLabel, renderSeo } from './content-format.mjs';
+export { h, lines, json, dateLabel };
+export const renderMarkdown = createMarkdown(validateImage);
 
 function validateImage(value, path) {
   if (!/^\/?assets\/[a-zA-Z0-9_./ -]+\.(?:png|jpe?g|webp|gif|avif|svg)$/i.test(value) || value.includes('..')) throw Error(`${path}: choose an image in assets/`);
@@ -60,8 +51,5 @@ export const raw = Object.fromEntries(schema.collections.map(collection => {
   validate(file.fields, value, file.name);
   return [file.name, value];
 }));
-const escapeTree = value => Array.isArray(value) ? value.map(escapeTree) : value && typeof value === 'object' ? Object.fromEntries(Object.entries(value).map(([k,v]) => [k, escapeTree(v)])) : typeof value === 'string' ? h(value) : value;
-// For template text and attributes only. Use raw when building URLs or JSON payloads.
 export const data = escapeTree(raw);
-export const dateLabel = value => value ? new Intl.DateTimeFormat('en-IN', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Asia/Kolkata' }).format(new Date(value)) : 'Coming soon';
-export const seoHead = page => `<title>${data.seo[page].title}</title><meta name="description" content="${data.seo[page].description}"><meta property="og:title" content="${data.seo[page].title}"><meta property="og:description" content="${data.seo[page].description}">${data.seo[page].image ? `<meta property="og:image" content="${h(new URL(raw.seo[page].image, schema.site_url).href)}">` : ''}`;
+export const seoHead = page => renderSeo(raw, page, schema.site_url);
