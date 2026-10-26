@@ -33,7 +33,7 @@
   "aboutText": "More than a sequence of postures. A space to slow down, move with intention, and reconnect with the person you are.",
   "heroSlider": {
     "autoplay": true,
-    "interval": 6000,
+    "interval": 3000,
     "transition": "fade",
     "speed": 800
   },
@@ -41,13 +41,13 @@
     {
       "secondaryLabel": "View classes",
       "buttonPage": "classes.html",
-      "buttonLabel": "",
+      "buttonLabel": "Book Now",
       "alignment": "center",
       "secondaryPage": "classes.html",
       "position": "bottom-center",
       "alt": "A man meditating on a tropical beach",
-      "mobilePosition": "bottom-left",
-      "title": "",
+      "mobilePosition": "bottom-center",
+      "title": "Transform Your Practice, Transform Your Life",
       "mobileImage": "",
       "image": "/assets/uploads/hero.webp",
       "imageFocus": "center",
