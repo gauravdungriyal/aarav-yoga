@@ -31,6 +31,59 @@
   "valuesTitle": "Our Core Values",
   "bannerText": "Your journey begins with a single breath.",
   "aboutText": "More than a sequence of postures. A space to slow down, move with intention, and reconnect with the person you are.",
+  "heroSlider": {
+    "autoplay": true,
+    "interval": 6000,
+    "transition": "fade",
+    "speed": 800
+  },
+  "heroSlides": [
+    {
+      "secondaryLabel": "View classes",
+      "buttonPage": "classes.html",
+      "buttonLabel": "",
+      "alignment": "left",
+      "secondaryPage": "classes.html",
+      "position": "bottom-center",
+      "alt": "A man meditating on a tropical beach",
+      "mobilePosition": "bottom-left",
+      "title": "",
+      "mobileImage": "",
+      "image": "/assets/uploads/hero.webp",
+      "imageFocus": "center",
+      "mobileImageFocus": "center"
+    },
+    {
+      "secondaryLabel": "View classes",
+      "buttonPage": "classes.html",
+      "buttonLabel": "",
+      "alignment": "left",
+      "secondaryPage": "classes.html",
+      "position": "bottom-left",
+      "alt": "Students practising yoga together in a bright studio",
+      "mobilePosition": "bottom-left",
+      "title": "",
+      "mobileImage": "",
+      "image": "/assets/uploads/group.jpg",
+      "imageFocus": "center",
+      "mobileImageFocus": "center"
+    },
+    {
+      "secondaryLabel": "View classes",
+      "buttonPage": "classes.html",
+      "buttonLabel": "",
+      "alignment": "left",
+      "secondaryPage": "classes.html",
+      "position": "bottom-left",
+      "alt": "A man practising a standing yoga posture in a sunlit studio",
+      "mobilePosition": "bottom-left",
+      "title": "",
+      "mobileImage": "",
+      "image": "/assets/uploads/studio-hero.png",
+      "imageFocus": "center",
+      "mobileImageFocus": "right"
+    }
+  ],
   "quote": "There is no perfect way to arrive. Just a breath, a little attention, and the willingness to begin.",
   "benefits": [
     {
@@ -56,58 +109,5 @@
   "bannerAlt": "A warm orange yoga mat being rolled after practice",
   "heroTitle": "Start Your Journey\nto Inner Peace",
   "stillCaption": "Less noise.\nMore room to simply be.",
-  "quoteImage": "/assets/uploads/hero.webp",
-  "heroSlides": [
-    {
-      "image": "/assets/uploads/hero.webp",
-      "alt": "A man meditating on a tropical beach",
-      "mobileImage": "",
-      "title": "",
-      "buttonLabel": "",
-      "buttonPage": "classes.html",
-      "secondaryLabel": "View classes",
-      "secondaryPage": "classes.html",
-      "position": "bottom-left",
-      "mobilePosition": "bottom-left",
-      "alignment": "left",
-      "imageFocus": "center",
-      "mobileImageFocus": "center"
-    },
-    {
-      "image": "/assets/uploads/group.jpg",
-      "alt": "Students practising yoga together in a bright studio",
-      "mobileImage": "",
-      "title": "",
-      "buttonLabel": "",
-      "buttonPage": "classes.html",
-      "secondaryLabel": "View classes",
-      "secondaryPage": "classes.html",
-      "position": "bottom-left",
-      "mobilePosition": "bottom-left",
-      "alignment": "left",
-      "imageFocus": "center",
-      "mobileImageFocus": "center"
-    },
-    {
-      "image": "/assets/uploads/studio-hero.png",
-      "alt": "A man practising a standing yoga posture in a sunlit studio",
-      "mobileImage": "",
-      "title": "",
-      "buttonLabel": "",
-      "buttonPage": "classes.html",
-      "secondaryLabel": "View classes",
-      "secondaryPage": "classes.html",
-      "position": "bottom-left",
-      "mobilePosition": "bottom-left",
-      "alignment": "left",
-      "imageFocus": "center",
-      "mobileImageFocus": "right"
-    }
-  ],
-  "heroSlider": {
-    "autoplay": true,
-    "interval": 6000,
-    "transition": "fade",
-    "speed": 800
-  }
+  "quoteImage": "/assets/uploads/hero.webp"
 }
