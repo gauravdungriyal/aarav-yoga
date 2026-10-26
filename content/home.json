@@ -1,8 +1,6 @@
 {
   "tagline": "Health, Harmony & Happiness",
   "heroTitle": "Start Your Journey\nto Inner Peace",
-  "heroImage": "/assets/uploads/hero.webp",
-  "heroAlt": "A man meditating on a tropical beach",
   "heroButton": "Get started",
   "heroNote": "A practice for every season of you.",
   "aboutTitle": "Move. Breathe. Transform.",
@@ -58,5 +56,58 @@
   "quote": "There is no perfect way to arrive. Just a breath, a little attention, and the willingness to begin.",
   "quoteAttribution": "A thought from Aarav Yoga",
   "quoteImage": "/assets/uploads/hero.webp",
-  "quoteAlt": "A man sitting in meditation on a sandy beach"
+  "quoteAlt": "A man sitting in meditation on a sandy beach",
+  "heroSlides": [
+    {
+      "image": "/assets/uploads/hero.webp",
+      "alt": "A man meditating on a tropical beach",
+      "mobileImage": "",
+      "title": "",
+      "buttonLabel": "",
+      "buttonPage": "classes.html",
+      "secondaryLabel": "View classes",
+      "secondaryPage": "classes.html",
+      "position": "bottom-left",
+      "mobilePosition": "bottom-left",
+      "alignment": "left",
+      "imageFocus": "center",
+      "mobileImageFocus": "center"
+    },
+    {
+      "image": "/assets/uploads/group.jpg",
+      "alt": "Students practising yoga together in a bright studio",
+      "mobileImage": "",
+      "title": "",
+      "buttonLabel": "",
+      "buttonPage": "classes.html",
+      "secondaryLabel": "View classes",
+      "secondaryPage": "classes.html",
+      "position": "bottom-left",
+      "mobilePosition": "bottom-left",
+      "alignment": "left",
+      "imageFocus": "center",
+      "mobileImageFocus": "center"
+    },
+    {
+      "image": "/assets/uploads/studio-hero.png",
+      "alt": "A man practising a standing yoga posture in a sunlit studio",
+      "mobileImage": "",
+      "title": "",
+      "buttonLabel": "",
+      "buttonPage": "classes.html",
+      "secondaryLabel": "View classes",
+      "secondaryPage": "classes.html",
+      "position": "bottom-left",
+      "mobilePosition": "bottom-left",
+      "alignment": "left",
+      "imageFocus": "center",
+      "mobileImageFocus": "right"
+    }
+  ],
+  "heroSlider": {
+    "autoplay": true,
+    "interval": 6000,
+    "transition": "fade",
+    "speed": 800
+  }
 }

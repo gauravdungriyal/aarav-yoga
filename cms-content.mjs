@@ -24,6 +24,14 @@ function validate(fields, data, path) {
     let v = data[f.name];
     const p = `${path}.${f.name}`;
     if ((v === undefined || v === null || v === '') && f.required === false) { data[f.name] = ''; continue; }
+    if (f.widget === 'boolean') {
+      if (typeof v !== 'boolean') throw Error(`${p}: expected true or false`);
+      continue;
+    }
+    if (f.widget === 'number') {
+      if (typeof v !== 'number' || !Number.isFinite(v) || (f.value_type === 'int' && !Number.isInteger(v)) || (f.min !== undefined && v < f.min) || (f.max !== undefined && v > f.max)) throw Error(`${p}: invalid number`);
+      continue;
+    }
     if (f.widget === 'object') { validate(f.fields, v, p); continue; }
     if (f.widget === 'list' || f.multiple) {
       if (!Array.isArray(v) || v.length < (f.min || 0) || (f.max && v.length > f.max)) throw Error(`${p}: invalid list length`);

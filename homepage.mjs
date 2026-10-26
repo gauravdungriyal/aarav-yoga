@@ -1,4 +1,5 @@
-import { data, raw, h, lines, seoHead } from './cms-content.mjs';
+import { data, raw, lines, seoHead } from './cms-content.mjs';
+import { renderHero } from './hero-slider.mjs';
 import { renderTestimonials } from './testimonials.mjs';
 import { renderFooter } from './footer.mjs';
 import { renderWhatsApp } from './contact.mjs';
@@ -9,11 +10,11 @@ const heading = (text, tag='h2', className='') => `<${tag} class="reveal-heading
 const pill = (text, href, outline=false) => `<a href="${href}" class="pill ${outline?'pill-outline':''}">${text}</a>`;
 
 export function renderHomepage() {
-return `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F2F0E7">${seoHead('index')}<link rel="icon" href="${data.settings.logo}" type="image/png"><link rel="stylesheet" href="homepage.css"><link rel="stylesheet" href="navigation.css"><link rel="stylesheet" href="contact.css"><link rel="stylesheet" href="footer.css"><script src="contact.js" defer></script><script src="navigation.js" defer></script><script src="homepage.js" defer></script></head><body data-page="index" class="editorial-home"><a class="skip-link" href="#main">Skip to content</a>
+return `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F2F0E7">${seoHead('index')}<link rel="icon" href="${data.settings.logo}" type="image/png"><link rel="stylesheet" href="vendor/splide-core.min.css"><link rel="stylesheet" href="homepage.css"><link rel="stylesheet" href="navigation.css"><link rel="stylesheet" href="hero-slider.css"><link rel="stylesheet" href="contact.css"><link rel="stylesheet" href="footer.css"><script src="contact.js" defer></script><script src="navigation.js" defer></script><script src="vendor/splide.min.js" defer></script><script src="hero-slider.js" defer></script><script src="homepage.js" defer></script></head><body data-page="index" class="editorial-home"><a class="skip-link" href="#main">Skip to content</a>
 ${renderHeader('index')}
 ${renderMenu('index')}
 <main id="main">
-<section id="home" class="hero-track" aria-labelledby="hero-heading"><div class="editorial-hero"><p class="studio-tagline">${data.home.tagline}</p><div class="hero-image-shell">${photo(data.home.heroImage,data.home.heroAlt,'hero-scene',true)}<div class="hero-image-tone"></div></div><div class="hero-ink"><h1 id="hero-heading">${raw.home.heroTitle.split(/\r?\n/).map(text => `<span>${h(text)}</span>`).join('')}</h1><div class="hero-actions">${pill(data.home.heroButton,'classes.html')}<a class="quiet-action" href="classes.html">View classes</a></div></div><span class="hero-bottom-note">${data.home.heroNote}</span><span class="hero-scroll-note" aria-hidden="true">SCROLL TO FIND YOUR FLOW</span></div></section>
+${renderHero()}
 
 <section id="about" class="about-editorial section-space"><div class="about-tall reveal-image" data-reveal>${photo(data.home.aboutImage,data.home.aboutAlt)}</div><div class="about-copy">${heading(data.home.aboutTitle)}<p data-reveal>${data.home.aboutText}</p><p data-reveal>${data.home.aboutTextSecond}</p>${pill('Meet our instructors','instructors.html',true)}</div><figure class="about-still-life reveal-image" data-reveal>${photo(data.home.stillImage,data.home.stillAlt)}<figcaption>${lines(raw.home.stillCaption)}</figcaption></figure></section>
 

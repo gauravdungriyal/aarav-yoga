@@ -47,6 +47,21 @@ Choose a section in the left menu, then its content entry. Repeated content such
 
 Save as a draft, mark it ready when reviewed, then publish. Decap's editorial workflow uses GitHub branches/pull requests; publishing merges the content into `main`. Vercel then rebuilds the website. Wait for a successful Vercel deployment before expecting the public site to change. Branch protections may require publishing through GitHub approval/merge instead.
 
+### Homepage hero slideshow
+
+Open **Homepage → Hero Slides** in the same editor. Add, delete or reorder between one and six slides. Each slide includes:
+
+- A desktop image and a description for screen readers. An optional mobile image replaces it on screens up to 760px wide.
+- An optional heading and primary button label; empty fields use **Hero Title** and **Hero Button**. Line breaks in headings are preserved.
+- Primary and secondary button destinations chosen from the site's pages. Clear the second button's label to hide it.
+- Separate desktop and mobile text positions, text alignment, and separate image focus positions to adjust cropping.
+
+**Hero Slider Settings** controls autoplay, time between slides (6000 milliseconds = six seconds), fade/slide transitions and transition duration. Start with three landscape photographs and concise headings. The first image is prioritised for loading; later images are lazy-loaded. One slide displays as a static hero without slideshow controls.
+
+Visitors can swipe, use arrows or dots, and pause playback. Autoplay pauses during hover, keyboard focus, the navigation menu, or when the hero/page is out of view. Reduced-motion preferences start the slider paused with instant transitions. Without JavaScript the first slide and its links remain visible.
+
+The existing hero scroll-to-split effect has been replaced by the slideshow; the benefit panels retain their scroll behaviour. Splide 4.1.4 is pinned and copied into the build, including its MIT license, so the public slideshow does not depend on a third-party CDN. Slide content stays in plain JSON under `content/home.json`, independently of Splide and Decap.
+
 Each section is one JSON document, so its list changes share a draft and publish together. There is no custom visual editor preview in this first version; inspect the Vercel preview deployment when available. Changes to layout, navigation structure, new page types, payments or booking systems still require development.
 
 ## Local editing

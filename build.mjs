@@ -11,7 +11,11 @@ import { mkdirSync, writeFileSync, copyFileSync, cpSync, readdirSync, existsSync
 import { resolve, relative, sep } from 'node:path';
 const out = process.env.CMS_OUTPUT_DIR || 'dist';
 mkdirSync(`${out}/assets`, { recursive: true });
-for (const name of ['styles.css', 'hero.css', 'app.js', 'homepage.css', 'homepage.js', 'navigation.css', 'navigation.js', 'contact.css', 'contact.js', 'footer.css']) copyFileSync(name, `${out}/${name}`);
+for (const name of ['styles.css', 'hero.css', 'app.js', 'homepage.css', 'homepage.js', 'hero-slider.css', 'hero-slider.js', 'navigation.css', 'navigation.js', 'contact.css', 'contact.js', 'footer.css']) copyFileSync(name, `${out}/${name}`);
+mkdirSync(`${out}/vendor`, { recursive: true });
+copyFileSync('node_modules/@splidejs/splide/dist/js/splide.min.js', `${out}/vendor/splide.min.js`);
+copyFileSync('node_modules/@splidejs/splide/dist/css/splide-core.min.css', `${out}/vendor/splide-core.min.css`);
+copyFileSync('node_modules/@splidejs/splide/LICENSE', `${out}/vendor/splide-LICENSE.txt`);
 copyFileSync('logo/logo.png', `${out}/assets/logo.png`);
 mkdirSync(`${out}/assets/instructors`, { recursive: true });
 for (let i = 1; i <= 8; i++) copyFileSync(`assets/instructors/teacher-${i}.jpg`, `${out}/assets/instructors/teacher-${i}.jpg`);

@@ -37,16 +37,202 @@
               "hint": "Line breaks are preserved."
             },
             {
-              "name": "heroImage",
-              "label": "Hero Image",
-              "widget": "image",
-              "choose_url": false,
-              "hint": "Upload or choose a site image. Use descriptive alternative text alongside it."
+              "name": "heroSlides",
+              "label": "Hero Slides",
+              "label_singular": "Slide",
+              "widget": "list",
+              "min": 1,
+              "max": 6,
+              "collapsed": true,
+              "summary": "{{fields.alt}}",
+              "hint": "Add, remove or reorder up to six slides. The first slide appears when the page opens.",
+              "fields": [
+                {
+                  "name": "image",
+                  "label": "Desktop Image",
+                  "widget": "image",
+                  "choose_url": false,
+                  "required": true
+                },
+                {
+                  "name": "alt",
+                  "label": "Image Description",
+                  "widget": "string",
+                  "required": true
+                },
+                {
+                  "name": "mobileImage",
+                  "label": "Mobile Image",
+                  "widget": "image",
+                  "choose_url": false,
+                  "required": false,
+                  "hint": "Optional portrait crop. Uses the desktop image when empty."
+                },
+                {
+                  "name": "title",
+                  "label": "Slide Heading",
+                  "widget": "text",
+                  "required": false,
+                  "hint": "Leave empty to use Hero Title. Line breaks are preserved."
+                },
+                {
+                  "name": "buttonLabel",
+                  "label": "Button Label",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "Leave empty to use Hero Button."
+                },
+                {
+                  "name": "buttonPage",
+                  "label": "Button Destination",
+                  "widget": "select",
+                  "options": [
+                    "classes.html",
+                    "contacts.html",
+                    "about.html",
+                    "events.html",
+                    "instructors.html",
+                    "gallery.html",
+                    "blogs.html",
+                    "index.html"
+                  ],
+                  "default": "classes.html"
+                },
+                {
+                  "name": "secondaryLabel",
+                  "label": "Second Button Label",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "Leave empty to hide the second button."
+                },
+                {
+                  "name": "secondaryPage",
+                  "label": "Second Button Destination",
+                  "widget": "select",
+                  "options": [
+                    "classes.html",
+                    "contacts.html",
+                    "about.html",
+                    "events.html",
+                    "instructors.html",
+                    "gallery.html",
+                    "blogs.html",
+                    "index.html"
+                  ],
+                  "default": "classes.html"
+                },
+                {
+                  "name": "position",
+                  "label": "Desktop Text Position",
+                  "widget": "select",
+                  "options": [
+                    "top-left",
+                    "top-center",
+                    "top-right",
+                    "middle-left",
+                    "middle-center",
+                    "middle-right",
+                    "bottom-left",
+                    "bottom-center",
+                    "bottom-right"
+                  ],
+                  "default": "bottom-left"
+                },
+                {
+                  "name": "mobilePosition",
+                  "label": "Mobile Text Position",
+                  "widget": "select",
+                  "options": [
+                    "top-left",
+                    "top-center",
+                    "top-right",
+                    "middle-left",
+                    "middle-center",
+                    "middle-right",
+                    "bottom-left",
+                    "bottom-center",
+                    "bottom-right"
+                  ],
+                  "default": "bottom-left"
+                },
+                {
+                  "name": "alignment",
+                  "label": "Text Alignment",
+                  "widget": "select",
+                  "options": [
+                    "left",
+                    "center",
+                    "right"
+                  ],
+                  "default": "left"
+                },
+                {
+                  "name": "imageFocus",
+                  "label": "Desktop Image Focus",
+                  "widget": "select",
+                  "options": [
+                    "left",
+                    "center",
+                    "right"
+                  ],
+                  "default": "center"
+                },
+                {
+                  "name": "mobileImageFocus",
+                  "label": "Mobile Image Focus",
+                  "widget": "select",
+                  "options": [
+                    "left",
+                    "center",
+                    "right"
+                  ],
+                  "default": "center"
+                }
+              ]
             },
             {
-              "name": "heroAlt",
-              "label": "Hero Alt",
-              "widget": "string"
+              "name": "heroSlider",
+              "label": "Hero Slider Settings",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "autoplay",
+                  "label": "Automatically Change Slides",
+                  "widget": "boolean",
+                  "default": true
+                },
+                {
+                  "name": "interval",
+                  "label": "Time Between Slides (milliseconds)",
+                  "widget": "number",
+                  "value_type": "int",
+                  "min": 3000,
+                  "max": 15000,
+                  "step": 500,
+                  "default": 6000,
+                  "hint": "6000 = six seconds."
+                },
+                {
+                  "name": "transition",
+                  "label": "Transition",
+                  "widget": "select",
+                  "options": [
+                    "fade",
+                    "slide"
+                  ],
+                  "default": "fade"
+                },
+                {
+                  "name": "speed",
+                  "label": "Transition Duration (milliseconds)",
+                  "widget": "number",
+                  "value_type": "int",
+                  "min": 0,
+                  "max": 2000,
+                  "step": 100,
+                  "default": 800
+                }
+              ]
             },
             {
               "name": "heroButton",
