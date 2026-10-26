@@ -1,17 +1,5 @@
 {
-  "tagline": "Health, Harmony & Happiness",
-  "heroTitle": "Start Your Journey\nto Inner Peace",
-  "heroButton": "Get started",
-  "heroNote": "A practice for every season of you.",
-  "aboutTitle": "Move. Breathe. Transform.",
-  "aboutText": "More than a sequence of postures. A space to slow down, move with intention, and reconnect with the person you are.",
-  "aboutTextSecond": "At Aarav Yoga, we believe a meaningful practice begins with curiosity. Come as you are. Find your own rhythm.",
-  "aboutImage": "/assets/uploads/editorial-studio.jpg",
-  "aboutAlt": "Warm light entering a quiet studio",
-  "stillImage": "/assets/uploads/editorial-vases.jpg",
   "stillAlt": "Neutral ceramic vases in a softly lit interior",
-  "stillCaption": "Less noise.\nMore room to simply be.",
-  "valuesTitle": "Our Core Values",
   "values": [
     {
       "label": "Inclusivity",
@@ -29,6 +17,21 @@
       "text": "We believe in clear guidance, shared encouragement, and kindness. Our studios bring people together in a supportive space to learn and grow."
     }
   ],
+  "quoteAttribution": "A thought from Aarav Yoga",
+  "aboutTitle": "Move. Breathe. Transform.",
+  "bannerTitle": "Let’s take it together",
+  "heroNote": "A practice for every season of you.",
+  "heroButton": "Get started",
+  "quoteAlt": "A man sitting in meditation on a sandy beach",
+  "aboutImage": "/assets/uploads/editorial-studio.jpg",
+  "tagline": "Health, Harmony & Happiness",
+  "aboutTextSecond": "At Aarav Yoga, we believe a meaningful practice begins with curiosity. Come as you are. Find your own rhythm.",
+  "bannerImage": "/assets/uploads/editorial-mat.jpg",
+  "stillImage": "/assets/uploads/editorial-vases.jpg",
+  "valuesTitle": "Our Core Values",
+  "bannerText": "Your journey begins with a single breath.",
+  "aboutText": "More than a sequence of postures. A space to slow down, move with intention, and reconnect with the person you are.",
+  "quote": "There is no perfect way to arrive. Just a breath, a little attention, and the willingness to begin.",
   "benefits": [
     {
       "image": "/assets/uploads/studio-hero.png",
@@ -49,14 +52,11 @@
       "text": "A little more presence. A little more kindness toward yourself."
     }
   ],
-  "bannerImage": "/assets/uploads/editorial-mat.jpg",
+  "aboutAlt": "Warm light entering a quiet studio",
   "bannerAlt": "A warm orange yoga mat being rolled after practice",
-  "bannerText": "Your journey begins with a single breath.",
-  "bannerTitle": "Let’s take it together",
-  "quote": "There is no perfect way to arrive. Just a breath, a little attention, and the willingness to begin.",
-  "quoteAttribution": "A thought from Aarav Yoga",
+  "heroTitle": "Start Your Journey\nto Inner Peace",
+  "stillCaption": "Less noise.\nMore room to simply be.",
   "quoteImage": "/assets/uploads/hero.webp",
-  "quoteAlt": "A man sitting in meditation on a sandy beach",
   "heroSlides": [
     {
       "image": "/assets/uploads/hero.webp",
